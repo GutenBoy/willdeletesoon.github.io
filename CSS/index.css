@@ -150,10 +150,9 @@ body {
     border-radius: 10px;
     background-color: white;
     width: 70vw;
-    height: 80vh;
+    height: fit-content;
     justify-content: center;
     align-items: center;
-    height: 85vh;
     position: relative;
     visibility: hidden;
 }
