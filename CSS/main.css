@@ -202,6 +202,13 @@ body{
     .hb{
         font-size: 3vh!important;
     }
+    .socialSection{
+        bottom:3%;
+    }
+    .side{
+        left: 3%;
+        top: 20%;
+    }
     
 }
 @media (max-width:450px) {
