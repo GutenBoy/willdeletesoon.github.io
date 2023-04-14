@@ -29,66 +29,6 @@ body{
     border-radius: 100%;
     background-color: black;
 }
-/* .parall1,
-.parall2,
-.parall3,
-.parall4 {
-    width: 50px;
-    height: 7px;
-    background-color: white;
-    margin: 12px -9px 12px -10px;
-}
-
-.parall1 {
-    transform: rotate(-45deg);
-}
-
-.parall4 {
-    transform: rotate(135deg);
-}
-
-.parall2 {
-    transform: rotate(45deg);
-}
-
-.parall3 {
-    transform: rotate(-135deg);
-}
-
-.parall12,
-.parall34 {
-    display: flex;
-    flex-direction: row;
-}
-
-.parent {
-    position: relative;
-}
-.parent p{
-    position: absolute;
-    top: 26%;
-    font-size: 1.5em;
-    left: 35%;
-} */
-/* 
-.add {
-    animation: aniimate 0.4s ease-in;
-    transition: 0.3s ease-in;
-    background-color: black;
-    width: 0px;
-    height: 7px;
-    animation-fill-mode: forwards;
-} */
-/* 
-@keyframes aniimate {
-    0% {}
-
-    100% {
-        width: 50px;
-    }
-
-} */
-
 
 
 /* Navigation Bar  and Min Navigation Bar*/
@@ -233,7 +173,6 @@ body{
 }
 
 
-
 /* MEDIA-QUEIRES FOR NAVIGATION BAR */
 
 @media (max-width:950px) {
@@ -253,7 +192,18 @@ body{
     }
 
 }
-
+@media (max-width:750px) {
+    #NavBar{
+        height: 7vh;
+    }
+    .footer{
+        height: 3.5vh!important;
+    }
+    .hb{
+        font-size: 3vh!important;
+    }
+    
+}
 @media (max-width:450px) {
 
     .one,
