@@ -31,41 +31,6 @@
 .azeem{
     transform: translateY(-14vh);
 }
-/* .doin::before{
-    content: attr(hey-text);
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    color: black;
-    left: 0;
-    top: 0;
-    animation-name: hehe;
-    animation-duration: 1s;
-    transition: 0.5s ease;
-} */
-/* .azeem::before{
-    content: attr(azeem-text);
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    color: black;
-    left: 0;
-    top: 0;
-    animation-name: hehe;
-    animation-duration: 1s;
-    transition: 0.5s ease;
-} */
-/* @keyframes hehe {
-    0%{
-        width: 10%;
-        color: #facf0f;
-    }
-    100%{
-        width: 100%;
-        color: #facf0f;
-    }
-} */
-
 .doin{
     margin:1px;
     display: flex;
