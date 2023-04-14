@@ -147,8 +147,11 @@
 @media (max-width:950px) {
     .rp {
         width: fit-content;
-        height: 20em;
+        height: 10em;
         z-index: 1;
+    }
+    .rp p{
+        font-size:0.8em;
     }
 
     .lp img {
@@ -179,6 +182,7 @@
         flex-direction: column;
         margin-top: 0%;
         height: 50vh;
+        margin-bottom:8%;
     }
 
     .rp {
