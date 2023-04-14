@@ -19,6 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
 .project1,
@@ -67,20 +69,20 @@
 
 .projectHeading {
     position: absolute;
-    top: -72%;
-    right: 6%;
+    top: -5em;
+    right: 1em;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 
 /* COROUSEL SLIDING STYLES */
 
-.next,
-.prev {
+.nextDiv,
+.prevDiv {
     color: black;
     position: absolute;
     width: 4%;
-    height: 5%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,18 +91,18 @@
     border-radius: 10px;
 }
 
-.next:hover,
-.prev:hover {
+.nextDiv:hover,
+.prevDiv:hover {
     transition: 1s ease;
     background-color: #facf0f;
 }
 
-.next {
-    bottom: 7em;
+.nextDiv {
+    bottom: -10em;
 }
 
-.prev {
-    top: 10em;
+.prevDiv {
+    top: -7.5em;
 }
 
 .corouselDots {
@@ -108,7 +110,7 @@
     position: absolute;
     top: 47%;
     display: flex;
-    right: 5%;
+    left: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -151,7 +153,7 @@
         z-index: 1;
     }
     .rp p{
-        font-size:0.8em;
+        font-size: 0.8em;
     }
 
     .lp img {
@@ -162,7 +164,7 @@
 
 @media (max-width:700px) {
     .rp p {
-        font-size: 0.6em
+        font-size: 0.6em;
     }
 
     .rp {
@@ -182,7 +184,7 @@
         flex-direction: column;
         margin-top: 0%;
         height: 50vh;
-        margin-bottom:8%;
+        margin-bottom: 8%;
     }
 
     .rp {
