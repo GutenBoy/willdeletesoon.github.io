@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     overflow: hidden;
 }
 
@@ -21,8 +21,11 @@ body{
     position: absolute;
     top: 48%;
     left: 46%;
-} 
-.one,.two,.three{
+}
+
+.one,
+.two,
+.three {
     margin: 5px;
     width: 1.5rem;
     height: 1.5rem;
@@ -65,7 +68,7 @@ body{
     color: #f6d334;
     transform: translateY(-1.5px);
 } */
-#NavBar ul li:hover{
+#NavBar ul li:hover {
     transition: 0.3s ease-in;
     background-color: #f6d334;
     transform: translateY(-1.5px);
@@ -89,7 +92,8 @@ body{
     width: 100vw;
     height: 0.5vh;
 }
-.fillBottom{
+
+.fillBottom {
     width: 20vw;
     background-color: #f6d334;
     height: inherit;
@@ -123,6 +127,8 @@ body{
 }
 
 /* LOGO */
+
+
 .side {
     display: flex;
     align-items: center;
@@ -192,25 +198,42 @@ body{
     }
 
 }
+
 @media (max-width:750px) {
-    #NavBar{
+    #NavBar {
         height: 7vh;
     }
-    .footer{
-        height: 3.5vh!important;
+
+    .footer {
+        height: 3.5vh !important;
     }
-    .hb{
-        font-size: 3vh!important;
+
+    .hb {
+        font-size: 3vh !important;
     }
-    .socialSection{
-        bottom:3%;
+
+    .socialSection {
+        bottom: 3%;
     }
-    .side{
+
+    .side {
         left: 3%;
         top: 20%;
     }
+    .logo img {
+        width: 26px;
+    }
+    .side p{
+        font-size: 0.8rem;
+    }
+    .logo {
+        width: 2rem;
+        height: 2rem;
+    }
     
+
 }
+
 @media (max-width:450px) {
 
     .one,
@@ -249,9 +272,10 @@ body{
     transition: 0.5s ease-in;
     display: none !important;
 }
-.bgimage{
-    background: none!important;
-    background-color: #e0e0e0!important;
+
+.bgimage {
+    background: none !important;
+    background-color: #e0e0e0 !important;
 }
 
 .background2 {
@@ -259,7 +283,7 @@ body{
     color: #f6d334;
 }
 
-.dotting::before{
+.dotting::before {
     content: '.';
     position: absolute;
     width: 100%;
@@ -294,52 +318,60 @@ body{
 
 }
 
-.fill{
+.fill {
     animation: fillBottom 1s ease-in;
     transition: 0.2s ease-in;
     animation-fill-mode: forwards;
     width: 0vw;
 }
+
 @keyframes fillBottom {
-    0%{
+    0% {
         width: 0vw;
     }
-    100%{
+
+    100% {
         width: 100vw;
     }
-    
+
 }
 
-.opacityOnLoad{
+.opacityOnLoad {
     animation: opacityOnLoad 1s ease;
     transition: 0.5s ease;
 }
+
 @keyframes opacityOnLoad {
-    0%{
+    0% {
         opacity: .5;
     }
-    75%{
+
+    75% {
         opacity: .8;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
-    
+
 }
 
-.footerUp{
+.footerUp {
     animation: footerUp 1s ease;
     transition: 0.5s ease;
 }
+
 @keyframes footerUp {
-    0%{
+    0% {
         transform: translateY(92%);
     }
-    100%{
+
+    100% {
         transform: translateY(0%);
     }
-    
+
 }
+
 /* FOOTER */
 
 .footer {
