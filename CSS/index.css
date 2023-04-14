@@ -75,7 +75,9 @@
     margin-top: 2%;
     text-align: center;
     font-size: 1rem;
-    font-family:'Courier New', Courier, monospace;
+    font-weight:lighter;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -248,12 +250,16 @@ form {
     .hey,.azeem{
         font-size: 3em!important;
     }
+    .side img{
+        width: 30px!important;
+    }
     
 }
 @media (max-width:350px) {
     .hey,.azeem{
         font-size: 2.2em!important;
     }
+
     
 }
 @media (max-width:700px) {
