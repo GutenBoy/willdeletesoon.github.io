@@ -37,7 +37,8 @@ body {
 /* Navigation Bar  and Min Navigation Bar*/
 
 #NavBar {
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
+    background-color: #f0f4f4;
     position: fixed;
     width: 100vw;
     height: 12vh;
@@ -218,19 +219,22 @@ body {
 
     .side {
         left: 3%;
-        top: 20%;
+        top: 33%;
     }
+
     .logo img {
-        width: 26px;
+        width: 32px;
     }
-    .side p{
+
+    .side p {
         font-size: 0.8rem;
     }
+
     .logo {
         width: 2rem;
         height: 2rem;
     }
-    
+
 
 }
 
@@ -358,7 +362,7 @@ body {
 
 .footerUp {
     animation: footerUp 1s ease;
-    transition: 0.5s ease;
+    /* transition: 0.5s ease; */
 }
 
 @keyframes footerUp {
