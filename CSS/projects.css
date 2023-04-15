@@ -8,7 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../Images/BACKGROUND-1.jpg")no-repeat center center/cover;
+    flex-direction: column;
+    /* background: url("../Images/BACKGROUND-1.jpg")no-repeat center center/cover; */
 }
 
 
@@ -20,6 +21,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 90vw;
     position: relative;
 }
 
@@ -27,13 +29,16 @@
 .project2,
 .project3 {
     display: flex;
-    width: 80vw;
-    height: 20vh;
+    width: fit-content;
+    height: fit-content;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 5%;
-    position: relative;
+}
+
+.projectMiddle {
+    display: flex;
+    /* margin-top: 5%; */
 }
 
 .lp {
@@ -43,7 +48,7 @@
 }
 
 .rp {
-    width: 50vw;
+    width: 40vw;
     height: 10em;
     margin-left: -15vw;
     z-index: 2;
@@ -63,15 +68,15 @@
 }
 
 .lp img {
-    width: 30em;
+    width: 30vw;
     border-radius: 5px;
 }
 
 .projectHeading {
     position: absolute;
-    top: -5em;
-    right: 1em;
-    font-family: 'Noto Sans JP', sans-serif;
+    top: 20%;
+    right: 9%;
+    font-family: 'Noto Sans JP', sans-serif
 }
 
 
@@ -80,15 +85,15 @@
 .nextDiv,
 .prevDiv {
     color: black;
-    position: absolute;
     width: 4%;
-    height: 20%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: rotate(90deg);
     cursor: pointer;
     border-radius: 10px;
+    border: 0px solid black;
 }
 
 .nextDiv:hover,
@@ -98,21 +103,22 @@
 }
 
 .nextDiv {
-    bottom: -10em;
+    margin-top: 3%;
 }
 
 .prevDiv {
-    top: -7.5em;
+    margin-bottom: 3%;
 }
 
 .corouselDots {
     flex-direction: column;
-    position: absolute;
-    top: 47%;
+    /* position: absolute; */
+    top: 34.5em;
     display: flex;
-    left: 100%;
+    right: 4em;
     align-items: center;
     justify-content: center;
+    margin-left: 5%;
 }
 
 .corouselDots button {
@@ -138,26 +144,18 @@
 }
 
 
-
-
-
-
-
 /* MEDIA QUERIES FOR PROJECT PAGE */
 
 
 @media (max-width:950px) {
     .rp {
         width: fit-content;
-        height: 10em;
+        height: 7em;
         z-index: 1;
     }
-    .rp p{
-        font-size: 0.8em;
-    }
 
-    .lp img {
-        width: 50vw;
+    .rp p {
+        font-size: 0.8em;
     }
 
 }
@@ -172,7 +170,7 @@
     }
 
     .projectHeading {
-        top: -30%
+        top: 15%;
     }
 }
 
@@ -240,15 +238,18 @@
     0% {
         opacity: .5;
         transform: translateY(-40%);
+        margin-top: 5%;
     }
 
     50% {
         opacity: .8;
+        margin-top: 5%;
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0%);
+        transform: translateY(0px);
+        margin-top: 5%;
     }
 
 }
