@@ -1,15 +1,16 @@
 
+
 /* HOME */
 
 #Home{
     width: 100vw;
     height: 97vh;
-    background-color: #e0e0e0;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url("../Images/BACKGROUND-1.jpg")no-repeat center center/cover;
+    /* background: url("../Images/BACKGROUND-1.jpg")no-repeat center center/cover; */
 }
 .Name{
     width: 85%;
@@ -40,9 +41,8 @@
     margin-top: 2%;
     text-align: center;
     font-size: 1rem;
-    font-weight:lighter;
     line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 
@@ -101,13 +101,6 @@
     background-color: #272727;
     color: #f6d334;
 }
-body {
-    background-color: lightgrey;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
 
 .contact {
     display: flex;
@@ -115,9 +108,9 @@ body {
     border-radius: 10px;
     background-color: white;
     width: 70vw;
-    height: fit-content;
     justify-content: center;
     align-items: center;
+    height: fit-content;
     position: relative;
     visibility: hidden;
 }
