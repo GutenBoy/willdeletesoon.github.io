@@ -116,7 +116,7 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
     const about = window.matchMedia("(max-width: 700px)");
     if (about.matches) {
         $(".azeem").html("I'M AZEEM");
-        $(".am p").html("Welcome to my digital home! As a computer science student, I am excited to share my passion for creating innovative digital solutions with you");
+//         $(".am p").html("Welcome to my digital home! As a computer science student, I am excited to share my passion for creating innovative digital solutions with you");
     }
 
 
