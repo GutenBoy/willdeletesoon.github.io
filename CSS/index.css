@@ -5,6 +5,16 @@ body{
     justify-content: center;
     align-items: center;
 }
+.HOMETEXT {
+    font-size: 10em;
+    color: #313131;
+    position: absolute;
+    top: 37%;
+    left:10%;
+    opacity: .1;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+}
+
 /* HOME */
 
 #Home{
@@ -15,8 +25,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background: url("../Images/BACKGROUND-1.jpg")no-repeat center center/cover; */
 }
+
 .Name{
     width: 85%;
     display: flex;
@@ -50,7 +60,15 @@ body{
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-
+@keyframes intro {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
 
 /* SOCIAL SECTION */
 
@@ -97,6 +115,7 @@ body{
     font-family: 'Noto Sans JP', sans-serif;
     margin: 30px;
     font-size: 0.8em;
+    box-shadow: 0px 1px 5px 1px rgb(55, 55, 55);
 }
 .contactMe:hover{
     transition: 0.5s ease-out!important;
@@ -227,6 +246,9 @@ form {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: bolder;
     }
+    .HOMETEXT{
+        font-size: 21vw;
+    }
 }
 
 
@@ -269,9 +291,12 @@ form {
         justify-content: center;
         box-shadow: 0px 0px 0px 0px white;
     }
+    .socialSection a{
+        font-size: 1.2em;
+    }
     .Name{
         align-items: normal;
-        margin-top:0%;
+        margin-top: 0%;
     }
     .am{
         text-align: justify;
@@ -286,8 +311,29 @@ form {
 
 /* JAVA SCRIPT USING CLASSES */
 
+/* .contactInfiniteMove{
+    animation: contactInfiniteMove 3s ease-in;
+    transition: 0.5s ease;
+}
+
+@keyframes contactInfiniteMove {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(50px);
+    }
+    75%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+} */
+
+
 .contactslide{
-    animation: cslideup 1s;
+    animation: cslideup 1s ease;
     transition: 0.2s ease;
     animation-fill-mode: forwards;
 }
@@ -308,6 +354,8 @@ form {
 .textinc{
     animation-name: incanddec;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: 0.5s ease;
 }
 
 @keyframes incanddec {

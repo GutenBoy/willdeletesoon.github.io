@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y Sathvik</title>
+    <!-- <link rel="stylesheet" href="CSS/main.css"> -->
+    <link rel="icon" type="image/x-icon" sizes="200x200" href="Images/Logo.png">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/7f2a891619.css" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Roboto&display=swap');
+
+        * {
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        .minNavigation {
+            top: 30px;
+            right: 0;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #NavBar {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: 10vh;
+            background-color: white;
+        }
+
+        .minNavigation li {
+            margin: 0px 25px;
+            list-style: none;
+            width: 5rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .minNavigation li a {
+            color: black;
+            text-decoration: none;
+            font-family: 'Noto Sans JP', sans-serif;
+            opacity: 0.8;
+            font-size: 0.7rem;
+        }
+
+        #NavBar ul li:hover {
+            transition: 0.3s ease-in;
+            background-color: #f6d334;
+            transform: translateY(-1.5px);
+            box-shadow: 0px 1px 5px 0px #7a7373;
+        }
+
+        .hb {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .visibilityNone {
+            display: none;
+        }
+
+        .slide-out {
+            transition: 1s;
+            transform: translateX(0px) !important;
+        }
+
+        #Home {
+            width: 100vw;
+            height: 90vh;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* no-repeat center center/cover;  */
+        }
+
+        .Name {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 3px;
+            line-height: 1.5;
+            margin-bottom: 50px;
+        }
+
+        .hey,
+        .azeem {
+            display: flex;
+        }
+
+        .doin {
+            margin: 1px;
+            display: flex;
+            font-size: 4em;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 500px;
+        }
+
+        .am {
+            margin-top: 2%;
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* SOCIAL SECTION */
+
+        .socialSection {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            font-size: calc(1.5vw + 1vh);
+            margin-right: 96vw;
+            position: absolute;
+            left: 0%;
+            bottom: 6%;
+            box-shadow: 0px 2px 10px 1px #7a7373;
+        }
+
+        .socialSection a {
+            margin: 2.5vh 1vw;
+            color: black;
+            text-decoration: none;
+        }
+
+        .socialSection a:hover {
+            transition: 0.3s ease-in;
+            color: #facf0f;
+            transform: translatey(-5%);
+        }
+
+        .side {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            font-size: 1rem;
+            left: 15px;
+            top: 12px;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .logo img {
+            margin-left: 2px;
+            width: 40px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        .side p {
+            color: #474747;
+            font-size: 1rem;
+            font-weight: bolder;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .side a {
+            text-decoration: none;
+        }
+
+        .side p:hover {
+            color: #facf0f;
+            transform: translateY(-1px);
+        }
+
+        .logo:hover {
+            transition: 0.2s ease-in;
+            border: 5px solid #fff306;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+        }
+
+        .contactMe,
+        .submitButton {
+            border-radius: 5px;
+            cursor: pointer;
+            width: 15vw;
+            height: 8vh;
+            background-color: #facf0f;
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            border: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 30px;
+        }
+
+        .contactMe:hover {
+            transition: 0.5s ease-out;
+            transform: translatey(-10px);
+            box-shadow: 0px 1px 5px 0px white;
+            background-color: #272727;
+            color: #facf0f;
+        }
+
+        body {
+            background-color: lightgrey;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            background-color: white;
+            width: 70vw;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+            position: relative;
+            visibility: hidden;
+        }
+
+        .contactform {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .contactform label {
+            margin-bottom: 1rem;
+        }
+
+        .contactform input {
+            width: 50vw;
+            height: 5vh;
+            margin-bottom: 1rem;
+            background-color: gainsboro;
+            width: 50vw;
+            height: 5vh;
+            margin-bottom: 1rem;
+            border: 0;
+            border-radius: 5px;
+            padding: 0 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contactform textarea {
+            border: 0;
+            background-color: gainsboro;
+            border-radius: 5px;
+            padding: 5px 15px;
+        }
+
+        input:focus,
+        textarea:focus {
+            /* transition: 0.5s ease-in; */
+            outline: none;
+            border-bottom: 2px solid #FFD230;
+        }
+
+        input:focus::placeholder,
+        textarea:focus::placeholder {
+            color: transparent;
+        }
+
+        .submitButton {
+            height: 6vh;
+        }
+
+        .submitButton:hover {
+            transition: 0.5s ease-in;
+            background-color: black;
+            color: #FFD230;
+        }
+
+        .closeForm {
+            position: absolute;
+            right: 3%;
+            top: 3%;
+            font-size: calc(1.5vw + 1.5vh);
+            cursor: pointer;
+        }
+
+        form {
+            margin-top: 10%;
+            margin-top: 10%;
+            width: 50vw;
+            font-size: 0.8rem;
+        }
+
+        ::placeholder {
+            font-size: 0.8rem;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            position: absolute;
+            bottom: 0%;
+            width: 100vw;
+            height: 6vh;
+            background-color: #353535;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer p {
+            color: white;
+            font-size: 0.8rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* JAVA SCRIPT USING CLASSES */
+
+        .slide-out {
+            transition: 0.5s ease-in;
+            transform: translateX(-45%) !important;
+        }
+
+        .visibilityNone {
+            transition: 0.2s ease-in;
+            display: none !important;
+        }
+
+        .background {
+            background-color: grey !important;
+        }
+
+        .textinc {
+            animation-name: incanddec;
+            animation-duration: 1s;
+        }
+
+        .animate {
+            transition: 0.5s ease-out;
+            animation: onload 0.5s;
+        }
+
+        @keyframes onload {
+            0% {
+                transform: translateY(0px);
+                background-color: black;
+            }
+
+            50% {
+                transform: translateY(10px);
+                background-color: #facf0f;
+            }
+
+            100% {
+                transform: translateY(-10px);
+                background-color: black;
+            }
+
+        }
+
+        @keyframes incanddec {
+            0% {
+                font-size: 3.8rem;
+                color: #facf0f;
+            }
+
+            50% {
+                font-size: 3.5rem;
+                color: #facf0f;
+            }
+
+            75% {
+                font-size: 3.3;
+            }
+
+            100% {
+                font-size: 4rem;
+                color: #facf0f;
+            }
+
+        }
+
+        /* MEDIA-QUEIRES FOR NAVIGATION BAR */
+
+        @media (max-width:950px) {
+            #NavBar ul {
+                flex-direction: column;
+                transform: translateX(120%);
+                top: 100%;
+            }
+
+            #NavBar ul li {
+                margin: 2rem 0rem;
+            }
+
+            #NavBar .hamBurger,
+            #NavBar .hamBurgerClose {
+                display: inline;
+            }
+
+        }
+
+        @media (max-width:450px) {
+
+            .one,
+            .two,
+            .three {
+                left: 35%;
+                width: 1rem !important;
+                height: 1rem !important;
+            }
+
+        }
+
+        @media (max-width:700px) {
+            .onloadShow {
+                left: 40% !important;
+            }
+        }
+
+
+
+
+        @media (max-width:800px) {
+            .minNavigation {
+                top: 10%;
+                flex-direction: column;
+                transform: translateX(130px);
+            }
+
+            .minNavigation li {
+                padding: 40px 30px;
+            }
+
+            .hamBurger {
+                display: inline !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span class="onloadShow visibilityNone">
+        <div class="one round"></div>
+        <div class="two round"></div>
+        <div class="three round"></div>
+    </span>
+    <div class="totalContainer">
+        <section id="NavBar">
+            <span class="side">
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Logo.png" alt="A"></a>
+                </div>
+                <a href="index.html">
+                    <p>ZEEM</p>
+                </a>
+            </span>
+            <div>
+                <ul class="minNavigation">
+                    <li class="nav"><a href="index.html">HOME</a></li>
+                    <li class="nav"><a href="projects.html">PROJECTS</a></li>
+                    <li class="nav"><a href="skills.html">SKILLS</a></li>
+                    <li class="nav"><a href="#">RESOURCES</a></li>
+                    <li class="nav"><a href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="hamBurger hb visibilityNone">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="hamBurgerClose hb visibilityNone">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </section>
+        <section id="Home">
+            <div class="Name">
+                <div class="hey">
+                    <div class="doin">H</div>
+                    <div class="doin">E</div>
+                    <div class="doin">Y</div>
+                    <div class="doin">,</div>
+                </div>
+                <div class="azeem">
+                    <div class="doin">I</div>
+                    <div class="doin">'</div>
+                    <div class="doin">M</div>
+                    <div class="doin">&nbsp;</div>
+                    <div class="doin">A</div>
+                    <div class="doin">Z</div>
+                    <div class="doin">E</div>
+                    <div class="doin">E</div>
+                    <div class="doin">M</div>
+                    <div class="doin">&nbsp;</div>
+                    <div class="doin">S</div>
+                    <div class="doin">H</div>
+                    <div class="doin">A</div>
+                    <div class="doin">I</div>
+                    <div class="doin">K</div>
+                </div>
+                <div class="am">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptas ex rerum iure facere quo,
+                        nam magnam, incidunt soluta excepturi doloribus similique asperiores unde quis repellendus et,
+                        officiis vel quia?</p>
+                </div>
+                <buttton class="contactMe" onclick="showForm()">
+                    CONTACT ME!
+                </buttton>
+            </div>
+            <div class="socialSection">
+                <a class="fa-brands fa-square-instagram" href="https://www.instagram.com/azeem.shaik.16906/"
+                    target="_blank"></a>
+                <a class="fa-brands fa-linkedin" href="https://www.linkedin.com/in/azeem-shaik-09b325243/"
+                    target="_blank"></a>
+                <a class="fa-brands fa-github" href="https://github.com/Azeem-0" target="_blank"></a>
+                <a class="fa-solid fa-envelope" href="mailto:azeemshaik025@gmail.com" target="_blank"></a>
+            </div>
+            <div class="footer">
+                <p>© 2023.Designed & Build by Azeem Shaik</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/7f2a891619.js" crossorigin="anonymous"></script>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
+
+        <!-- <section class="roadAbout">
+            <section id="About">
+                <span class="edheading">
+                    <button context = "education" onclick="aboutAzeem(this)">Academics</button>
+                </span>
+                <span class="hbheading">
+                    <button context = "hobbies"onclick="aboutAzeem(this)">Hobbies</button>
+                </span>
+                <span class="fvheading">
+                    <button context = "favourites" onclick="aboutAzeem(this)">Favorites</button>
+                </span>
+                <span class="iCan">
+                    <button context="menmyself" onclick="aboutAzeem(this)">I'm..</button>
+                </span>
+                <span class="alian">
+                    <!-- <i class="fa-solid fa-school" style="color: #000000;"></i> -->
+                </span>
+                <div class="startAbout">
+                    <p>About Me</p>
+                </div>
+                <div class="education des visibilityNone">
+                    <ul>
+                        <li class="item1">My high school education was completed at ZP high school, where i achieved a 9.7 GPA in my 10th standard.</li>
+                        <li class="item2">I completed my intermediate at Deeksha Junior College with a score of 981 marks.</li>
+                        <li class="item3">At this moment, I'm in my second year of computer science of engineering at MVGR college of engineering.</li>
+                    </ul>
+                </div>
+                <div class="hobbies visibilityNone des">
+                    <ul>
+                        <li class="item1">Hobbies</li>
+                        <li class="item2">Hobbies</li>
+                        <li class="item3">Hobbies</li>
+                        <li class="item4">Hobbies</li>
+                        <li class="item5">Hobbies</li>
+                        <!-- <li class="item1">Music 🎵</li>
+                        <li class="item2">Playing Cricket 🏏</li>
+                        <li class="item3">Coding 🧑‍💻</li>
+                        <li class="item4">Temp</li>
+                        <li class="item5">Temp</li>
+                        <li class="item6">Temp</li> -->
+                    </ul>
+                </div>
+                <div class="favourites visibilityNone des">
+                    <ul>
+                        <li class="item1">Favorites</li>
+                        <li class="item2">Favorites</li>
+                        <li class="item3">Favorites</li>
+                        <li class="item4">Favorites</li>
+                        <li class="item5">Favorites</li>
+                    </ul>
+                </div>
+                <div class="menmyself visibilityNone des">
+                    <ul>
+                        <li class="item1">MENMYSELF</li>
+                        <li class="item2">MENMYSELF</li>
+                        <li class="item3">MENMYSELF</li>
+                        <li class="item4">MENMYSELF</li>
+                        <li class="item5">MENMYSELF</li>
+                    </ul>
+                </div>
+            </section>
+            <div class="footer">
+                <p>© 2023.Designed & Build by Azeem Shaik</p>
+            </div>
+        </section>

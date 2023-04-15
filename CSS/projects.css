@@ -1,6 +1,16 @@
 /* PROJECT PAGE STYLING */
 
+.PROJECTTEXT {
+    font-size: 8em;
+    color: black;
+    position: absolute;
+    top: 0%;
+    left: -2%;
+    opacity: .1;
+    writing-mode: vertical-rl;
+    /* font-family: 'Noto Sans JP', sans-serif; */
 
+}
 
 #Projects {
     height: 100vh;
@@ -9,7 +19,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background: url("../Images/BACKGROUND-1.jpg")no-repeat center center/cover; */
 }
 
 
@@ -25,20 +34,18 @@
     position: relative;
 }
 
+
 .project1,
 .project2,
 .project3 {
     display: flex;
-    width: fit-content;
-    height: fit-content;
+    width: 80vw;
+    height: 20vh;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
-
-.projectMiddle {
-    display: flex;
-    /* margin-top: 5%; */
+    margin-top: 5%;
+    position: relative;
 }
 
 .lp {
@@ -48,7 +55,7 @@
 }
 
 .rp {
-    width: 40vw;
+    width: 50vw;
     height: 10em;
     margin-left: -15vw;
     z-index: 2;
@@ -68,15 +75,15 @@
 }
 
 .lp img {
-    width: 30vw;
+    width: 30em;
     border-radius: 5px;
 }
 
 .projectHeading {
     position: absolute;
-    top: 20%;
-    right: 9%;
-    font-family: 'Noto Sans JP', sans-serif
+    top: -5em;
+    right: 2em;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 
@@ -85,15 +92,17 @@
 .nextDiv,
 .prevDiv {
     color: black;
+    background-color: transparent;
     width: 4%;
-    height: 10%;
+    height: 9%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(90deg);
     cursor: pointer;
     border-radius: 10px;
+    font-size: 1.5em;
     border: 0px solid black;
+
 }
 
 .nextDiv:hover,
@@ -103,22 +112,21 @@
 }
 
 .nextDiv {
-    margin-top: 3%;
+    transform: rotate(90deg) translateX(250%)
 }
 
 .prevDiv {
-    margin-bottom: 3%;
+    transform: rotate(90deg) translateX(-150%);
 }
 
 .corouselDots {
     flex-direction: column;
-    /* position: absolute; */
-    top: 34.5em;
+    position: absolute;
+    top: 47%;
     display: flex;
-    right: 4em;
+    left: 100%;
     align-items: center;
     justify-content: center;
-    margin-left: 5%;
 }
 
 .corouselDots button {
@@ -144,18 +152,37 @@
 }
 
 
-/* MEDIA QUERIES FOR PROJECT PAGE */
 
+
+
+
+
+/* MEDIA QUERIES FOR PROJECT PAGE */
+@media (max-width:1030px) {
+    .prevDiv {
+        transform: rotate(90deg) translateX(-200%);
+
+    }
+
+    .nextDiv {
+        transform: rotate(90deg) translateX(300%);
+    }
+
+}
 
 @media (max-width:950px) {
     .rp {
         width: fit-content;
-        height: 7em;
+        height: 10em;
         z-index: 1;
     }
 
     .rp p {
         font-size: 0.8em;
+    }
+
+    .lp img {
+        width: 50vw;
     }
 
 }
@@ -170,11 +197,11 @@
     }
 
     .projectHeading {
-        top: 15%;
+        top: -30%
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:700px) {
 
     .project1,
     .project2,
@@ -182,7 +209,6 @@
         flex-direction: column;
         margin-top: 0%;
         height: 50vh;
-        margin-bottom: 8%;
     }
 
     .rp {
@@ -199,10 +225,6 @@
         margin-bottom: 5%;
     }
 
-    .projects {
-        margin-top: 11%;
-    }
-
     .corouselDots button {
         width: 0.7em;
         height: 0.7em;
@@ -211,6 +233,23 @@
     .active {
         width: 0.8em;
         height: 0.8em;
+    }
+
+    .corouselDots {
+        top: 39%;
+        left: 88%;
+    }
+
+    .prevDiv,
+    .nextDiv {
+        width: 10%;
+        height: 5%;
+    }
+    .prevDiv{
+        transform: rotate(90deg) translateX(-90%);
+    }
+    .nextDiv{
+        transform: rotate(90deg) translateX(120%);
     }
 }
 
@@ -238,18 +277,15 @@
     0% {
         opacity: .5;
         transform: translateY(-40%);
-        margin-top: 5%;
     }
 
     50% {
         opacity: .8;
-        margin-top: 5%;
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0px);
-        margin-top: 5%;
+        transform: translateY(0%);
     }
 
 }

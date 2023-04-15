@@ -6,9 +6,7 @@
 
 // JAVA SCRIPT FOR LOADER COMMON TO EVERY WEBPAGE
 
-
 $(document).ready(function () {
-
 
     $(".fillBottom").addClass("fill");
 
@@ -48,14 +46,14 @@ $(document).ready(function () {
 // MINIMUM NAVIGATION BAR TOGGLING CLASSES 
 
 function togglingClasses() {
-    $(".adjust").toggleClass("visibilityNone");
     $(".Name").toggleClass("visibilityNone");
     $(".socialSection").toggleClass("visibilityNone");
-    $(".aboutMe").toggleClass("visibilityNone");
+    $("#Skills").toggleClass("visibilityNone");
+    $("#AboutMe").toggleClass("visibilityNone");
     $(".totalContainer").toggleClass("background");
     $(".hamBurger").toggleClass("visibilityNone");
     $(".hamBurgerClose").toggleClass("visibilityNone");
-    $(".projects").toggleClass("visibilityNone");
+    $("#Projects").toggleClass("visibilityNone");
 
 }
 $(".hamBurger").click(function () {
@@ -101,6 +99,9 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
 
 
     // ANIMATION TO SHOW A HOVER OVER THE MAIN TEXT IN HOME PAGE
+
+
+    const incdec = window.matchMedia("(max-width: 950px)");
     for (var i = 0; i < 19; i++) {
         $(".doin")[i].addEventListener('mouseover', myFunc);
     }
@@ -108,15 +109,50 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
     function myFunc(e) {
         $(this).addClass("textinc");
         setTimeout(function () {
-            $(".textinc").removeClass("textinc");
-        }, 3000);
+            $(".doin").removeClass("textinc");
+        }, 1000);
     }
 
+
+    // CONTACT BUTTON SLIDING INFINETLY
+    // setInterval(() => {
+    //     $(".slidingButton").addClass("contactInfiniteMove");
+    //     setTimeout(() => {
+    //         $(".slidingButton").removeClass("contactInfiniteMove");
+    //     }, 3000);
+    // }, 2010);
+
+    // function textAnimate()
+    // {
+    //     for(var i = 0;i<19;i++){
+    //         document.querySelectorAll(".azeem .doin")[i].classList.add("textinc");
+    //     }
+    // }
+    // var count = 0;
+    //     setInterval(() => {
+    //         if(count >= 15){
+    //             $(".azeem .doin").removeClass("textinc");
+    //             count = 0;
+    //             setTimeout(() => {
+    //                 document.querySelectorAll(".azeem .doin")[count++].classList.add("textinc");
+
+    //             }, 500);
+    //         }
+    //         else{
+    //             setTimeout(() => {
+    //                 document.querySelectorAll(".azeem .doin")[count].classList.add("textinc");
+    //                 count++;
+    //             }, 200);
+    //         }
+
+
+    //     }, 100);
+
     // FIXING THE TEXT LENGTH FOR MOBILE DEVICES
-    const about = window.matchMedia("(max-width: 700px)");
-    if (about.matches) {
+    const am = window.matchMedia("(max-width: 700px)");
+    if (am.matches) {
         $(".azeem").html("I'M AZEEM");
-//         $(".am p").html("Welcome to my digital home! As a computer science student, I am excited to share my passion for creating innovative digital solutions with you");
+        // $(".am p").html("Welcome to my digital home! As a computer science student, I am excited to share my passion for creating innovative digital solutions with you");
     }
 
 
@@ -222,6 +258,7 @@ else if (window.location.pathname.includes("/projects.html")) {
             $(".corouselDots .dot" + i).removeClass("active");
             $(".project" + i).removeClass("slideDown");
             $(".project" + i).removeClass("slideUp");
+            // $(".projectHeading").removeClass("projectHeadingSlide");
         }
         if (addend == -1) {
             $(".project" + next).addClass("slideDown");
@@ -229,6 +266,7 @@ else if (window.location.pathname.includes("/projects.html")) {
         else {
             $(".project" + next).addClass("slideUp");
         }
+        // $(".projectHeading").addClass("projectHeadingSlide");
     }
 
     function makeProjectActive(dotNumber) {

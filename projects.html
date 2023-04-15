@@ -21,6 +21,9 @@
         <div class="three round"></div>
     </span>
     <div class="totalContainer visibilityNone">
+        <div class="PROJECTTEXT">
+            PROJECTS.
+        </div>
         <section id="NavBar">
             <span class="side">
                 <div class="logo">
@@ -52,63 +55,71 @@
             </div>
         </section>
         <section id="Projects">
+            <button class="prevDiv" onclick="moveProject(-1)">
+                ❮
+            </button>
             <div class="projects corousel-container">
-                <a class="prev" onclick="moveProject(-1)">❮</a>
-                <a class="next" onclick="moveProject(1)">❯</a>
-                <div class="corouselDots">
-                    <button class="dot1 active" onclick="makeProjectActive(1)"></button>
-                    <button class="dot2 " onclick="makeProjectActive(2)"></button>
-                    <button class="dot3 " onclick="makeProjectActive(3)"></button>
-                </div>
-                <div class="project1 slideDown visibilityNone">
-                    <div class="projectHeading">
-                        <h1>PROJECT-1</h1>
+                <div class="projectMiddle">
+                    <div class="project1 slideDown visibilityNone">
+                        <div class="projectHeading">
+                            <h1>PROJECT-1</h1>
+                        </div>
+                        <div class="lp">
+                            <img src="Images/Azeem's_replica.jpg" alt="">
+                        </div>
+                        <div class="rp">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
+                                libero explicabo dolor, ipsa nostrum natus dolorem eligendi minus iusto, unde
+                                consequatur
+                                labore illum corrupti est? Iure, vero!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum similique deserunt
+                                dolor blanditiis.
+                            </p>
+                        </div>
                     </div>
-                    <div class="lp">
-                        <img src="Images/Azeem's_replica.jpg" alt="">
-                    </div>
-                    <div class="rp">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
-                            libero explicabo dolor, ipsa nostrum natus dolorem eligendi minus iusto, unde consequatur
-                            labore illum corrupti est? Iure, vero!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum similique deserunt
-                            dolor blanditiis.
-                        </p>
-                    </div>
-                </div>
-                <div class="project2 visibilityNone">
-                    <div class="projectHeading">
-                        <h1>PROJECT-2</h1>
-                    </div>
-                    <div class="lp">
-                        <img src="Images/pexels-hasan-albari-1229861.jpg" alt="">
-                    </div>
-                    <div class="rp">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem sequi, consectetur quod
-                            quam placeat officiis minima vitae mollitia eius aut velit iste numquam cumque perferendis.
+                    <div class="project2 visibilityNone">
+                        <div class="projectHeading">
+                            <h1>PROJECT-2</h1>
+                        </div>
+                        <div class="lp">
+                            <img src="Images/pexels-hasan-albari-1229861.jpg" alt="">
+                        </div>
+                        <div class="rp">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem sequi, consectetur
+                                quod
+                                quam placeat officiis minima vitae mollitia eius aut velit iste numquam cumque
+                                perferendis.
 
-                        </p>
-                    </div>
+                            </p>
+                        </div>
 
-                </div>
-                <div class="project3 visibilityNone">
-                    <div class="projectHeading">
-                        <h1>PROJECT-3</h1>
                     </div>
-                    <div class="lp">
-                        <img src="Images/pexels-hasan-albari-1229861.jpg" alt="">
+                    <div class="project3 visibilityNone">
+                        <div class="projectHeading">
+                            <h1>PROJECT-3</h1>
+                        </div>
+                        <div class="lp">
+                            <img src="Images/pexels-hasan-albari-1229861.jpg" alt="">
+                        </div>
+                        <div class="rp">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
+                                libero explicabo dolor, ipsa nostrum natus dolorem eligendi minus iusto, unde
+                                consequatur
+                                labore illum corrupti est? Iure, vero!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum similique deserunt
+                                dolor, blanditiis
+                            </p>
+                        </div>
                     </div>
-                    <div class="rp">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
-                            libero explicabo dolor, ipsa nostrum natus dolorem eligendi minus iusto, unde consequatur
-                            labore illum corrupti est? Iure, vero!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum similique deserunt
-                            dolor, blanditiis
-                        </p>
+                    <div class="corouselDots">
+                        <button class="dot1 active" onclick="makeProjectActive(1)"></button>
+                        <button class="dot2 " onclick="makeProjectActive(2)"></button>
+                        <button class="dot3 " onclick="makeProjectActive(3)"></button>
                     </div>
                 </div>
             </div>
+            <button class="nextDiv" onclick="moveProject(1)">❯</button>
         </section>
         <div class="footer">
             <p>© 2023.Designed & Build by Azeem Shaik</p>
