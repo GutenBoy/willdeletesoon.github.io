@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="preload" href="Images/BACKGROUND-1.jpg" as="image">
+    <link rel="preload" href="Images/Laptop.png" as="image">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/projects.css">
+    <link rel="icon" type="image/x-icon" sizes="200x200" href="Images/Logo.png">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/7f2a891619.css" crossorigin="anonymous">
+</head>
+
+<body id="ProjectPage">
+    <span class="onloadShow visibilityNone">
+        <div class="one round"></div>
+        <div class="two round"></div>
+        <div class="three round"></div>
+    </span>
+    <div class="totalContainer visibilityNone">
+        <div class="PROJECTTEXT">
+            PROJECTS.
+        </div>
+        <section id="NavBar">
+            <span class="side">
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Logo.png" alt="A"></a>
+                </div>
+                <a href="index.html">
+                    <p>ZEEM</p>
+                </a>
+            </span>
+            <div class="minNavigation">
+                <ul>
+                    <li class="nav"><a href="index.html">HOME</a></li>
+                    <li class="nav ProjectPage"><a href="projects.html">PROJECTS</a></li>
+                    <li class="nav"><a href="skills.html">SKILLS</a></li>
+                    <li class="nav"><a href="resources.html">RESOURCES</a></li>
+                    <li class="nav"><a href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="hamBurger hb">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="hamBurgerClose hb visibilityNone">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="borderBottom">
+                <div class="fillBottom">
+
+                </div>
+            </div>
+        </section>
+        <section id="Projects">
+            <button class="prevDiv" onclick="moveProject(-1)">
+                ❮
+            </button>
+            <div class="projects corousel-container">
+                <div class="projectMiddle">
+                    <div class="project1 slideDown visibilityNone">
+                        <div class="projectHeading">
+                            <h1>PROJECT-1</h1>
+                        </div>
+                        <div class="lp">
+                            <img src="Images/Azeem's_replica.jpg" alt="">
+                        </div>
+                        <div class="rp">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
+                                libero explicabo dolor, ipsa nostrum natus dolorem eligendi minus iusto, unde
+                                consequatur
+                                labore illum corrupti est? Iure, vero!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum similique deserunt
+                                dolor blanditiis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project2 visibilityNone">
+                        <div class="projectHeading">
+                            <h1>PROJECT-2</h1>
+                        </div>
+                        <div class="lp">
+                            <img src="Images/pexels-hasan-albari-1229861.jpg" alt="">
+                        </div>
+                        <div class="rp">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo autem sequi, consectetur
+                                quod
+                                quam placeat officiis minima vitae mollitia eius aut velit iste numquam cumque
+                                perferendis.
+
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="project3 visibilityNone">
+                        <div class="projectHeading">
+                            <h1>PROJECT-3</h1>
+                        </div>
+                        <div class="lp">
+                            <img src="Images/pexels-hasan-albari-1229861.jpg" alt="">
+                        </div>
+                        <div class="rp">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum deserunt dolorum
+                                libero explicabo dolor, ipsa nostrum natus dolorem eligendi minus iusto, unde
+                                consequatur
+                                labore illum corrupti est? Iure, vero!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum similique deserunt
+                                dolor, blanditiis
+                            </p>
+                        </div>
+                    </div>
+                    <div class="corouselDots">
+                        <button class="dot1 active" onclick="makeProjectActive(1)"></button>
+                        <button class="dot2 " onclick="makeProjectActive(2)"></button>
+                        <button class="dot3 " onclick="makeProjectActive(3)"></button>
+                    </div>
+                </div>
+            </div>
+            <button class="nextDiv" onclick="moveProject(1)">❯</button>
+        </section>
+        <div class="footer">
+            <p>© 2023.Designed & Build by Azeem Shaik</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/7f2a891619.js" crossorigin="anonymous"></script>
+    <script>
+    </script>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
