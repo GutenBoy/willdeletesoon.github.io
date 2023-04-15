@@ -292,6 +292,9 @@
     .skilldescription p {
         font-size: 0.7em;
     }
+    .SKILLTEXT{
+        font-size: 20vw;
+    }
 
 }
 

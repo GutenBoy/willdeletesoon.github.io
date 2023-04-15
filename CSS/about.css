@@ -7,326 +7,20 @@
     bottom: 1%;
     left: -2%;
     opacity: .1;
-    /* font-family: 'Noto Sans JP', sans-serif; */
+}
+#NavBar{
+    backdrop-filter: blur(10px);
 }
 
 #AboutMe {
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* background: url("../Images/BACKGROUND-1.jpg")no-repeat center center/cover; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     line-height: 1.5;
 }
-.roadAbout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #e0e0e0;
-}
-
-#About {
-    margin-top: 7%;
-    display: flex;
-    height: 60%;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    border-radius: 100px;
-    border: 25px solid white;
-}
-
-.startAbout {
-    font-size: calc(3vw + 1vh);
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-.edheading,
-.fvheading,
-.hbheading,
-.iCan {
-    position: absolute;
-    width: 15vw;
-    height: 6vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:  #facf0f;
-    border-radius: 10px;
-}
-
-.edheading {
-    left: 10%;
-    top: 20%;
-}
-
-.hbheading {
-    right: 5%;
-    bottom: 8%;
-}
-
-.fvheading {
-    left: 10%;
-    bottom: 8%;
-}
-
-.iCan {
-    top: 20%;
-    right: 5%;
-}
-
-/* DESCRIPTION OF ABOUT SECTION */
-
-.des {
-    position: absolute;
-    width: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.des ul{
-    position: relative;
-}
-.des ul li {
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-    line-height: 1.5;
-    padding: 0.5rem;
-    font-weight:normal;
-}
-
-.des ul li::before {
-    content: "•";
-    color: #facf0f;
-    position: absolute;
-    left: 0;
-}
-
-/* ANIMATIONS FOR THE BORDER */
-
-
-.fillborder1 {
-    border: 25px solid white;
-    animation: animate1 2s;
-    transition: 2s ease-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animate1 {
-    0% {
-        border-top: 25px solid white;
-    }
-
-    50% {
-        border-top: 25px solid #ffba1e;
-    }
-
-    100% {
-        border-top: 25px solid #facf0f;
-    }
-
-}
-
-.fillborder2 {
-    border: 25px solid white;
-    animation: animate2 2s;
-    transition: 2s ease-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animate2 {
-    0% {
-        border-top: 25px solid #ffba1e;
-    }
-
-    50% {
-        border-left: 25px solid #ffba1e;
-    }
-
-    100% {
-        border-top: 25px solid #facf0f;
-        border-left: 25px solid #facf0f;
-    }
-
-}
-
-.fillborder3 {
-    border: 25px solid white;
-    animation: animate3 2s;
-    transition: 2s ease-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animate3 {
-    0% {
-        border-top: 25px solid #ffba1e;
-        border-left: 25px solid #ffba1e;
-    }
-
-    50% {
-        border-bottom: 25px solid #ffba1e;
-    }
-
-    100% {
-        border-top: 25px solid #facf0f;
-        border-left: 25px solid #facf0f;
-        border-bottom: 25px solid #facf0f;
-    }
-
-}
-
-.fillborder4 {
-    border: 25px solid white;
-    animation: animate4 2s;
-    transition: 2s ease-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animate4 {
-    0% {
-        border-top: 25px solid #ffba1e;
-        ;
-    }
-
-    50% {
-        border-left: 25px solid #ffba1e;
-        ;
-    }
-
-    75% {
-        border-bottom: 25px solid #ffba1e;
-        border-right: 25px solid #ffba1e;
-    }
-
-    100% {
-        border-top: 25px solid #facf0f;
-        border-left: 25px solid #facf0f;
-        border-bottom: 25px solid #facf0f;
-        border-right: 25px solid #facf0f;
-    }
-
-}
-
-/* BUTTON STYLING */
-
-button {
-    font-family: 'Noto Sans JP', sans-serif;
-    cursor: pointer;
-    padding: 0;
-    border: none;
-    background: none;
-}
-
-/* ALIEN WALKING THROUGH THE ROAD */
-.alian {
-    position: absolute;
-    top: 27%;
-}
-
-.moveleft {
-    animation: moveleft 2s;
-    transition: 3s ease-in;
-    animation-fill-mode: forwards;
-}
-
-@keyframes moveleft {
-    0% {
-        left: 50%;
-    }
-
-    100% {
-        left: 25%;
-    }
-
-}
-
-.moveright {
-    animation: moveright 2s;
-    transition: 3s ease-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes moveright {
-    0% {
-        left: 50%;
-    }
-
-    100% {
-        left: 73%;
-    }
-
-}
-
-.movebottom {
-    animation: movebottom 2s;
-    transition: 3s ease-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes movebottom {
-    0% {
-        top: 25%;
-        left: 50%;
-    }
-
-    50% {
-        left: 20%;
-        top: 25%;
-        transform: rotate(330deg);
-    }
-
-    100% {
-        left: 20%;
-        top: 85%;
-    }
-
-}
-
-
-/* MEDIA QUEIRES FOR THE ABOUT PAGE */
-
-/* MEDIA QUERY FOR THE ROADMAP */
-
-@media (max-width:700px) {
-    #About {
-        margin-top: 12%;
-    }
-
-    .des ul li {
-        font-size: 0.8rem;
-    }
-
-}
-
-@media (max-width:600px) {
-    #About button {
-        font-size: 0.7rem;
-    }
-
-    #About {
-        border-radius: 60px;
-        margin-top: 15%;
-    }
-    .des ul li {
-        font-size: 0.6rem;
-        font-weight: bolder;
-    }
-}
-
-@media (max-width:350px) {
-    #About {
-        margin-top: 20%;
-    }
-
-    .des ul li {
-        font-size: 0.4rem;
-    }
-}
-
 
 .a1 h1 {
     margin: 10px;
@@ -353,6 +47,10 @@ button {
     border-radius: 2px;
 }
 .descriptionSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     z-index: 1;
 }
 
@@ -380,16 +78,6 @@ button {
     flex-direction: row;
     width: 100vw;
     height: 50vh;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
-@media (max-width:1030px) {
-    .myImage img {
-        width: 40em;
-    }
-    .myImage{
-        position: absolute;
-    }
-    
-    
 }

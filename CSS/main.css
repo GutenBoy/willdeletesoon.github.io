@@ -38,8 +38,6 @@ body {
 /* Navigation Bar  and Min Navigation Bar*/
 
 #NavBar {
-    /* backdrop-filter: blur(2px); */
-    /* background-color: #f0f4f4; */
     position: fixed;
     width: 100vw;
     height: 12vh;
@@ -225,7 +223,7 @@ body {
 
 @media (max-width:750px) {
     #NavBar {
-        height: 7vh;
+        height: 8vh;
     }
 
     .footer {
@@ -239,23 +237,10 @@ body {
     .socialSection {
         bottom: 3%;
     }
-
-    .side {
-        left: 3%;
-        top: 19%;
-    }
-    .logo img {
-        width:30px;
+    .side{
+        top: 15%;
     }
     
-    .side p {
-        font-size: 0.8rem;
-    }
-    
-    .logo {
-        width: 2rem;
-        height: 2rem;
-    }
 }
 @media (max-width:450px) {
 
@@ -344,7 +329,6 @@ body {
 .fill {
     animation: fillBottom 1.5s ease-in;
     transition: 0.5s ease-in;
-    /* animation-fill-mode: forwards; */
     width: 0vw;
 }
 

@@ -191,7 +191,6 @@ else if (window.location.pathname.includes("/skills.html")) {
             $(".iconshead").toggleClass("skillDescriptionSlide");
         }
     }
-
     // AUTO FILL WHEN CLICKED THE SKILL ICON
     $(".iconImages").click(function () {
         var a = $(this).attr("id");
@@ -210,7 +209,10 @@ else if (window.location.pathname.includes("/about.html")) {
     // ABOUT SECTION JQUERY
 
     // BUILDING A ROAD FOR THE ABOUT SECTION
-
+    // const about = window.matchMedia("(max-width:1030px)");
+    // if(about.matches){
+    //     $(".myImage").addClass("visibilityNone");
+    // }
     function aboutAzeem(button) {
         var a = button.getAttribute("context");
         console.log(a);

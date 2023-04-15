@@ -52,6 +52,8 @@
     width: fit-content;
     height: fit-content;
     z-index: 1;
+    display: flex;
+    flex-direction: row;
 }
 
 .rp {
@@ -64,7 +66,7 @@
     align-items: center;
     text-align: justify;
     background-color: lightgrey;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .rp p {
@@ -86,6 +88,19 @@
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+/* TOOLS USED */
+.usedTools {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 115%;
+    right: 27%;
+    font-size: 1.5em;
+}
+
+.usedTools i {
+    margin: 30%;
+}
 
 /* COROUSEL SLIDING STYLES */
 
@@ -209,11 +224,23 @@
         flex-direction: column;
         margin-top: 0%;
         height: 50vh;
+        align-items: flex-start;
+    }
+
+    .usedTools {
+        position: static;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .usedTools i {
+        margin-bottom: 50%;
     }
 
     .rp {
         margin-left: 0%;
-        margin-top: 3%;
+        margin-top: 0%;
     }
 
     .projectHeading {
@@ -245,10 +272,12 @@
         width: 10%;
         height: 5%;
     }
-    .prevDiv{
+
+    .prevDiv {
         transform: rotate(90deg) translateX(-90%);
     }
-    .nextDiv{
+
+    .nextDiv {
         transform: rotate(90deg) translateX(120%);
     }
 }
