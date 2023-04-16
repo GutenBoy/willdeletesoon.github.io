@@ -112,7 +112,7 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
         $(this).addClass("textinc");
         setTimeout(function () {
             $(".doin").removeClass("textinc");
-        }, 1000);
+        }, 3000);
     }
 
 

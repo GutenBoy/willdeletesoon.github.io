@@ -76,7 +76,7 @@
     font-weight: lighter;
 }
 
-.lp img {
+.lp .img {
     width: 30em;
     border-radius: 5px;
 }
@@ -95,11 +95,11 @@
     position: absolute;
     top: 115%;
     right: 27%;
-    font-size: 1.5em;
 }
 
-.usedTools i {
-    margin: 30%;
+.usedTools img {
+    width: 30px;
+    margin: 20%;
 }
 
 /* COROUSEL SLIDING STYLES */
@@ -196,7 +196,7 @@
         font-size: 0.8em;
     }
 
-    .lp img {
+    .lp .img {
         width: 50vw;
     }
 
@@ -231,9 +231,9 @@
         margin-top: 5%;
     }
 
-    .usedTools i {
+    .usedTools img {
         margin-bottom: 50%;
-        font-size: 0.7em;
+        width: 20px;
     }
 
     .rp {
