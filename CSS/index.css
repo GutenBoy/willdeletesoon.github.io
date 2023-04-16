@@ -44,6 +44,11 @@ body{
     transform: translateY(-10vh);
     font-size: 4em;
 }
+.shaik{
+    color: #f6d334;
+    opacity: .7;
+    display: flex;
+}
 .azeem{
     transform: translateY(-14vh);
 }
