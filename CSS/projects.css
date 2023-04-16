@@ -123,7 +123,7 @@
 .nextDiv:hover,
 .prevDiv:hover {
     transition: 1s ease;
-    background-color: #facf0f;
+    background-color: #ffec96;
 }
 
 .nextDiv {

@@ -1,3 +1,5 @@
+/* THIS IS A COMMON CSS FILE WHICH IS ACCESSIBLE FROM EVERY PAGE */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
 
@@ -14,6 +16,47 @@ body {
 .totalContainer {
     height: 100vh;
 }
+
+
+/* CUSTOM MOUSE ANIMATION STYLING CSS */
+
+.mouseHead{
+    position: absolute;
+    left: 17px;
+    top: 4px;
+}
+
+.mouseOutAndDot {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.mouseOut {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    border: 0.5px solid black;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.15s ease;
+}
+
+.mouseDot {
+    border-radius: 100%;
+    background-color: black;
+    width: 0.4em;
+    height: 0.4em;
+    transition: 0.1s ease;
+    position: absolute;
+    top: 42%;
+    left: 40.5%;
+}
+
+
+
 
 /* ON-LOAD COMMON FOR EVERY PAGE */
 
@@ -35,13 +78,16 @@ body {
 }
 
 
-/* Navigation Bar  and Min Navigation Bar*/
+/* Navigation Bar*/
 
 #NavBar {
     position: fixed;
+    background-color: #f4f5f6;
+    /* backdrop-filter: blur(10px); */
     width: 100vw;
     height: 12vh;
     z-index: 3;
+
 }
 
 #NavBar ul {
@@ -63,19 +109,12 @@ body {
     align-items: center;
 }
 
-/* #NavBar ul li a:hover {
-    transition: 0.3s ease-in;
+#NavBar ul li a:hover{
+    transition: 0.2s ease-in;
+    transform: translateY(-2.5px);
     color: #f6d334;
-    transform: translateY(-1.5px);
-} */
-#NavBar ul li:hover {
-    transition: 0.3s ease-in;
-    background-color: #f6d334;
-    transform: translateY(-1.5px);
-    box-shadow: 0px 1px 5px 0px #7a7373;
-    border-radius: 2px;
-    color: black !important;
 }
+
 
 #NavBar ul li a {
     color: #313131;
@@ -85,21 +124,6 @@ body {
     font-size: 0.79rem;
     position: relative;
 }
-
-/* FILLING THE BORDER BOTTOM OF  THE NAVIGATION BAR */
-.borderBottom {
-    position: absolute;
-    top: 100%;
-    width: 100vw;
-    height: 0.5vh;
-}
-
-.fillBottom {
-    width: 20vw;
-    background-color: #f6d334;
-    height: inherit;
-}
-
 
 /* NAVIGATON BAR MINIMUM */
 
@@ -127,10 +151,10 @@ body {
     right: 2%;
 }
 
+
 /* LOGO */
 
-
-.side {
+.logoContainer {
     display: flex;
     align-items: center;
     position: absolute;
@@ -139,7 +163,6 @@ body {
     top: 20px;
     font-family: 'Noto Sans JP', sans-serif;
 }
-
 .logo img {
     margin-left: 2px;
     width: 40px;
@@ -147,7 +170,7 @@ body {
     cursor: pointer;
 }
 
-.side p {
+.logoContainer p {
     color: #313131;
     font-size: 1rem;
     font-weight: bolder;
@@ -155,39 +178,12 @@ body {
     cursor: pointer;
     position: relative;
 }
-
-/* .side p::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 0%;
-    animation: slideZeem 1s ease;
-    transition: 0.5s ease;
-    color: #353535;
-}
-@keyframes slideZeem {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
-} */
-
-.side a {
+.logoContainer a {
     text-decoration: none;
 }
 
-.side p:hover {
-    color: #f6d334;
-    transform: translateY(-1px);
-}
-
-
-
 .logo:hover {
-    transition: 0.2s ease-in;
+    transition: 0.15s ease-in;
     border: 5px solid #f6d334;
 }
 
@@ -201,7 +197,27 @@ body {
 }
 
 
-/* MEDIA-QUEIRES FOR NAVIGATION BAR */
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100vw;
+    height: 6vh;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.footer p {
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* MEDIA-QUEIRES */
 
 @media (max-width:950px) {
     #NavBar ul {
@@ -237,13 +253,15 @@ body {
     .socialSection {
         bottom: 3%;
     }
-    .side{
+    .logoContainer{
         top: 15%;
     }
-    
-}
-@media (max-width:450px) {
-
+    .mouseHead{
+        display: none;
+    }
+    .onloadShow {
+        left: 40% !important;
+    }
     .one,
     .two,
     .three {
@@ -251,38 +269,33 @@ body {
         width: 1rem !important;
         height: 1rem !important;
     }
-
-}
-
-@media (max-width:700px) {
-    .onloadShow {
-        left: 40% !important;
+    .footer p {
+        font-size: 0.5em;
     }
+    
 }
-
 
 
 
 
 /* JAVA SCRIPT USING CLASSES */
 
-.slide-out {
+.navSlide-out {
     transition: 0.5s ease-in;
     transform: translateX(-45%) !important;
 }
 
-.slide-in {
+.navSlide-in {
     transition: 0.5s ease-in;
     transform: translateX(210%) !important;
 }
 
 .visibilityNone {
-    transition: 0.5s ease-in;
+    transition: 0.4s ease-in;
     display: none !important;
 }
 
 .bgimage {
-    background: none !important;
     background-color: #e0e0e0 !important;
 }
 
@@ -291,7 +304,7 @@ body {
     color: #f6d334;
 }
 
-.dotting::before {
+/* .dotting::before {
     content: '.';
     position: absolute;
     width: 100%;
@@ -299,9 +312,9 @@ body {
     top: 0%;
     left: 40%;
     font-size: 2em;
-}
+} */
 
-.animate {
+.onLoadAnimate {
     transition: 1s ease;
     animation: onload 0.5s;
 }
@@ -377,7 +390,6 @@ body {
 
 .footerUp {
     animation: footerUp 1s ease;
-    /* transition: 0.5s ease; */
 }
 
 @keyframes footerUp {
@@ -387,35 +399,6 @@ body {
 
     100% {
         transform: translateY(0%);
-    }
-
-}
-
-/* FOOTER */
-
-.footer {
-    position: absolute;
-    bottom: 0%;
-    width: 100vw;
-    height: 6vh;
-    background-color: #353535;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 2px;
-}
-
-.footer p {
-    color: white;
-    font-size: 0.8rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-
-/* MEDIA QUEIRIES FOR FOOTER */
-@media (max-width:500px) {
-    .footer p {
-        font-size: 0.5em;
     }
 
 }

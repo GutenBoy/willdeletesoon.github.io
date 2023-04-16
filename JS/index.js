@@ -6,6 +6,7 @@
 
 // JAVA SCRIPT FOR LOADER COMMON TO EVERY WEBPAGE
 
+
 $(document).ready(function () {
 
     $(".fillBottom").addClass("fill");
@@ -18,20 +19,23 @@ $(document).ready(function () {
 
     $("." + a + " a").addClass("dotting");
 
-    $(".onloadShow").removeClass("visibilityNone"); //showing the three dots.
+    $(".onloadShow").removeClass("visibilityNone");   //showing the three dots.
 
 
-    $(".one").addClass("animate"); //adding the animate class to the three dots sequentially.
+    $(".one").addClass("onLoadAnimate");       //adding the Animation class to the three dots sequentially.
     setTimeout(function () {
-        $(".two").addClass("animate");
+        $(".two").addClass("onLoadAnimate");
         setTimeout(function () {
-            $(".three").addClass("animate");
+            $(".three").addClass("onLoadAnimate");
         }, 100);
     }, 100);
+
+
     setTimeout(function () {
-        $(".onloadShow").addClass("visibilityNone"); //removing the three dots.
-        $(".totalContainer").removeClass("visibilityNone"); //showing the document after loading the three dots animation.
+        $(".onloadShow").addClass("visibilityNone");    //removing the three dots.
+        $(".totalContainer").removeClass("visibilityNone");    //showing the document after loading the three dots animation.
         $(".totalContainer").addClass("opacityOnLoad");
+        $(".mouseHead").removeClass("visibilityNone");
         $(".footer").addClass("footerUp");
         $(".skilldescription").addClass("skillDescriptionSlide");
         $(".heading button").addClass("skillButtonSlide");
@@ -43,52 +47,51 @@ $(document).ready(function () {
 });
 
 
+// CUSTOM MOUSE JAVASCRIPT
+
+const cursorOut = document.querySelector('.mouseOut');
+const cursorDot = document.querySelector('.mouseDot');
+const moveCursor = (e) => {
+    const MouseMoveY = e.clientY - 25;
+    const MouseMoveX = e.clientX - 35;
+    cursorOut.style.transform = `translate3d(${MouseMoveX}px, ${MouseMoveY}px, 0)`;
+    cursorDot.style.transform = `translate3d(${MouseMoveX}px, ${MouseMoveY}px, 0)`;
+}
+window.addEventListener('mousemove', moveCursor);
+
+
+
+
 // MINIMUM NAVIGATION BAR TOGGLING CLASSES 
 
+
 function togglingClasses() {
-    $(".Name").toggleClass("visibilityNone");
-    $(".socialSection").toggleClass("visibilityNone");
     $("#Skills").toggleClass("visibilityNone");
     $("#AboutMe").toggleClass("visibilityNone");
+    $("#Projects").toggleClass("visibilityNone");
+    $(".socialSection").toggleClass("visibilityNone");
+    $(".Name").toggleClass("visibilityNone");
     $(".totalContainer").toggleClass("background");
     $(".hamBurger").toggleClass("visibilityNone");
     $(".hamBurgerClose").toggleClass("visibilityNone");
-    $("#Projects").toggleClass("visibilityNone");
-
 }
+
 $(".hamBurger").click(function () {
     togglingClasses();
-    $("#NavBar ul").addClass("slide-out");
-    $(".hamBurgerClose").addClass("slide-out");
-    $("#NavBar ul").removeClass("slide-in");
-    $(".hamBurgerClose").removeClass("slide-in");
+    $("#NavBar ul").addClass("navSlide-out");
+    $(".hamBurgerClose").addClass("navSlide-out");
+    $("#NavBar ul").removeClass("navSlide-in");
+    $(".hamBurgerClose").removeClass("navSlide-in");
 });
 $(".hamBurgerClose").click(function () {
-    $("#NavBar ul").removeClass("slide-out");
-    $(".hamBurgerClose").removeClass("slide-out");
-    $("#NavBar ul").addClass("slide-in");
-    $(".hamBurgerClose").addClass("slide-in");
+    $("#NavBar ul").removeClass("navSlide-out");
+    $(".hamBurgerClose").removeClass("navSlide-out");
+    $("#NavBar ul").addClass("navSlide-in");
+    $(".hamBurgerClose").addClass("navSlide-in");
     setTimeout(() => {
         togglingClasses();
     }, 400);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // JQUERY CODE FOR INDIVIDUAL PAGE SEPARATELY
@@ -122,7 +125,7 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
     //     }, 3000);
     // }, 2010);
 
-    // function textAnimate()
+    // function textonLoadAnimate()
     // {
     //     for(var i = 0;i<19;i++){
     //         document.querySelectorAll(".azeem .doin")[i].classList.add("textinc");
@@ -148,16 +151,18 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
 
     //     }, 100);
 
+
+
+
     // FIXING THE TEXT LENGTH FOR MOBILE DEVICES
+
     const am = window.matchMedia("(max-width: 700px)");
     if (am.matches) {
         $(".azeem").html("I'M AZEEM");
-        // $(".am p").html("Welcome to my digital home! As a computer science student, I am excited to share my passion for creating innovative digital solutions with you");
     }
 
-
-
     // CONTACT FORM DISPLAYING
+
     $(".contact").slideUp();
     $(".closeForm").click(function () {
         $("body").toggleClass("bgimage");
@@ -173,6 +178,8 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
         $(".totalContainer").addClass("visibilityNone");
         $(".contact").slideDown();
     }
+
+
 }
 
 
@@ -181,16 +188,18 @@ else if (window.location.pathname.includes("/skills.html")) {
     const skill = window.matchMedia("(max-width:1030px)");
 
     if (skill.matches) {
+
         $(".iconshead").addClass("skillDescriptionSlide");
         $(".skilldescription").addClass("visibilityNone");
         function openSkillDescription() {
             $(".heading button").toggleClass("background2");
             $(".skilldescription").toggleClass("visibilityNone");
             $(".iconshead").toggleClass("visibilityNone");
-            // $(".skilldescription").toggleClass("showingSkills");
             $(".iconshead").toggleClass("skillDescriptionSlide");
         }
     }
+
+
     // AUTO FILL WHEN CLICKED THE SKILL ICON
     $(".iconImages").click(function () {
         var a = $(this).attr("id");
@@ -201,46 +210,11 @@ else if (window.location.pathname.includes("/skills.html")) {
         }, 100);
     });
 
+
 }
 
 else if (window.location.pathname.includes("/about.html")) {
 
-
-    // ABOUT SECTION JQUERY
-
-    // BUILDING A ROAD FOR THE ABOUT SECTION
-    // const about = window.matchMedia("(max-width:1030px)");
-    // if(about.matches){
-    //     $(".myImage").addClass("visibilityNone");
-    // }
-    function aboutAzeem(button) {
-        var a = button.getAttribute("context");
-        console.log(a);
-        $(".startAbout").addClass("visibilityNone");
-        $(".education").addClass("visibilityNone");
-        $(".favourites").addClass("visibilityNone");
-        $(".hobbies").addClass("visibilityNone");
-        $(".menmyself").addClass("visibilityNone");
-        if (a == 'education') {
-            $(".education").removeClass("visibilityNone");
-            $(".alian").removeClass("moveleft moveright movebottom moveup");
-            $(".alian").addClass("moveleft");
-        }
-        else if (a == 'menmyself') {
-            $(".alian").removeClass("moveleft moveright movebottom moveup");
-            $(".menmyself").removeClass("visibilityNone");
-            $(".alian").addClass("moveright");
-        }
-        else if (a == 'favourites') {
-            $(".alian").removeClass("moveleft moveright movebottom moveup");
-            $(".favourites").removeClass("visibilityNone");
-            $(".alian").addClass("movebottom");
-        }
-        else {
-            $(".alian").removeClass("moveleft moveright movebottom moveup");
-            $(".hobbies").removeClass("visibilityNone");
-        }
-    }
 }
 
 else if (window.location.pathname.includes("/projects.html")) {
@@ -260,7 +234,6 @@ else if (window.location.pathname.includes("/projects.html")) {
             $(".corouselDots .dot" + i).removeClass("active");
             $(".project" + i).removeClass("slideDown");
             $(".project" + i).removeClass("slideUp");
-            // $(".projectHeading").removeClass("projectHeadingSlide");
         }
         if (addend == -1) {
             $(".project" + next).addClass("slideDown");
@@ -268,7 +241,6 @@ else if (window.location.pathname.includes("/projects.html")) {
         else {
             $(".project" + next).addClass("slideUp");
         }
-        // $(".projectHeading").addClass("projectHeadingSlide");
     }
 
     function makeProjectActive(dotNumber) {

@@ -20,7 +20,7 @@ body{
 #Home{
     width: 100vw;
     height: 97vh;
-    background-color: #fff;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +54,8 @@ body{
 }
 .am{
     margin-top: 2%;
-    text-align: center;
+    text-align: justify;
+    text-align-last: center;
     font-size: 1rem;
     line-height: 1.8;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -115,7 +116,7 @@ body{
     font-family: 'Noto Sans JP', sans-serif;
     margin: 30px;
     font-size: 0.8em;
-    box-shadow: 0px 1px 5px 1px rgb(55, 55, 55);
+    box-shadow: 0px 1px 4px 0px rgb(55, 55, 55);
 }
 .contactMe:hover{
     transition: 0.5s ease-out!important;
@@ -390,10 +391,7 @@ form {
         font-size: 3.5;
         transform: translateY(1vh);
     }
-    75%{
-        font-size: 4.3em;
-        transform: translateY(-1vh);
-    }
+
     100%{
         font-size: 4em;
         transform: translateY(0vh);

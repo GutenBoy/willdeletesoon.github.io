@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Azeem | About</title>
     <link rel="preload" href="Images/BACKGROUND-1.jpg" as="image">
     <link rel="stylesheet" href="Images/Azeem's_replica.jpg" as="image">
     <link rel="stylesheet" href="CSS/about.css">
@@ -15,6 +15,14 @@
 </head>
 
 <body id="AboutPage">
+    <div class="mouseHead visibilityNone">
+        <div class="mouseOutAndDot">
+            <div class="mouseOut">
+            </div>
+            <div class="mouseDot">
+            </div>
+        </div>
+    </div>
     <span class="onloadShow visibilityNone">
         <div class="one round"></div>
         <div class="two round"></div>
@@ -25,7 +33,7 @@
             ABOUT ME.
         </div> -->
         <section id="NavBar">
-            <span class="side">
+            <span class="logoContainer">
                 <div class="logo">
                     <a href="index.html"><img src="Images/Logo.png" alt="A"></a>
                 </div>
@@ -54,6 +62,9 @@
         </section>
         <section id="AboutMe">
             <div class="aboutMe">
+                <div class="myImage">
+                    <img src="Images/1.jpeg" alt="">
+                </div>
                 <div class="descriptionSection">
                     <div class="a1">
                         <h1>HEY THERE!</h1>
@@ -82,15 +93,27 @@
                         </p>
                     </div>
                 </div>
-                <div class="myImage">
-                    <img src="Images/Azeem's_replica2.jpeg" alt="">
-                </div>
             </div>
         </section>
         <div class="footer">
             <p>© 2023.Designed & Build by Azeem Shaik</p>
         </div>
     </div>
+    <!-- <script>
+        const AzeemPhoto = document.querySelector('.myImage img');
+        const moveCursor2 = (e) => {
+            var AzeemY =  e.clientY;
+            var AzeemX = e.clientX;
+            if(AzeemX > AzeemY){
+                AzeemX = -50;
+                AzeemY = 0;
+            }
+            AzeemPhoto.style.transform = `translate3d(${AzeemX}px, ${AzeemY}px, 0)`;
+            // AzeemPhoto.style.transform = `translate3d(${AzeemX}px, ${AzeemY}px, 0)`;
+        }
+        window.addEventListener('mousemove', moveCursor2);
+
+    </script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7f2a891619.js" crossorigin="anonymous"></script>
     <script src="JS/index.js"></script>
