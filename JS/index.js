@@ -104,7 +104,6 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
     // ANIMATION TO SHOW A HOVER OVER THE MAIN TEXT IN HOME PAGE
 
 
-    const incdec = window.matchMedia("(max-width: 950px)");
     for (var i = 0; i < 19; i++) {
         $(".doin")[i].addEventListener('mouseover', myFunc);
     }

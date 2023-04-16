@@ -12,7 +12,6 @@ body{
     top: 37%;
     left:10%;
     opacity: .1;
-    /* font-family: 'Noto Sans JP', sans-serif; */
 }
 
 /* HOME */
@@ -45,7 +44,7 @@ body{
     font-size: 4em;
 }
 .shaik{
-    color: #f6d334;
+    color: #facf0f;
     opacity: .7;
     display: flex;
 }
@@ -63,17 +62,8 @@ body{
     text-align-last: center;
     font-size: 1rem;
     line-height: 1.8;
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-@keyframes intro {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
-    
+    color: #313131;;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* SOCIAL SECTION */
@@ -96,7 +86,7 @@ body{
 }
 .socialSection a:hover{
     transition: 0.3s ease-in;
-    color: #f6d334;
+    color: #facf0f;
     transform: translatey(-5%);
 }
 
@@ -112,7 +102,7 @@ body{
     cursor: pointer;
     width: 14em;
     height: 8vh;
-    background-color: #f6d334;
+    background-color: #facf0f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +118,7 @@ body{
     transform: translatey(-10px);
     box-shadow: 0px 1px 5px 0px white;
     background-color: #272727;
-    color: #f6d334;
+    color: #facf0f;
 }
 
 .contact {
@@ -155,8 +145,6 @@ body{
 }
 
 .contactform input {
-    width: 50vw;
-    height: 5vh;
     margin-bottom: 1rem;
     background-color: gainsboro;
     width: 50vw;
@@ -184,7 +172,7 @@ input:focus,
 textarea:focus {
     /* transition: 0.5s ease-in; */
     outline: none;
-    border-bottom: 2px solid #f6d334;
+    border-bottom: 2px solid #facf0f;
 }
 input:focus::placeholder,textarea:focus::placeholder{
     color: transparent;
@@ -195,7 +183,7 @@ input:focus::placeholder,textarea:focus::placeholder{
 .submitButton:hover{
     transition: 0.5s ease-in;
     background-color: black;
-    color: #f6d334;
+    color: #facf0f;
 }
 .closeForm {
     position: absolute;
@@ -204,11 +192,18 @@ input:focus::placeholder,textarea:focus::placeholder{
     font-size: calc(1.5vw + 1.5vh);
     cursor: pointer;
 }
+.contactHeading{
+    text-align: center;
+    font-family:'Noto Sans JP', sans-serif;
+    margin-bottom: 5vh;
+}
 form {
     margin-top: 10%;
     margin-top: 10%;
     width: 50vw;
     font-size: 0.8rem;
+    letter-spacing: 2px;
+    /* text-align: center; */
 }
 ::placeholder{
     font-size: 0.8rem;
@@ -223,8 +218,6 @@ form {
 
 /* MEDIA QUEIRIES FOR MIDDLE-CONTAINER */
 
-@media (max-width:500px) {
-}
 
 @media (max-width:450px) {
     .hey,.azeem{
@@ -234,6 +227,9 @@ form {
         width: 30px!important;
     }
     
+    .contactHeading{
+        font-size: 0.8em;
+    }
 }
 @media (max-width:390px) {
     .hey,.azeem{
@@ -242,7 +238,9 @@ form {
     .am p{
         font-size: 0.7em;
     }
-
+    .contactHeading{
+        font-size: 0.5em;
+    }
     
 }
 @media (max-width:700px) {
@@ -359,26 +357,23 @@ form {
 
 .textinc{
     animation-name: incanddec;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
-    transition: 0.5s ease;
+    transition: 0.1s ease;
 }
 
 @keyframes incanddec {
     0%{
         font-size: 3.8rem;
-        color: #f6d334;
     }
     50%{
         font-size: 3.5rem;
-        color: #f6d334;
     }
     75%{
         font-size: 3.3;
     }
     100%{
         font-size: 4rem;
-        color: #f6d334;
     }
     
 }

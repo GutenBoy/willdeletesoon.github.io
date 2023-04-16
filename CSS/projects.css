@@ -137,9 +137,9 @@
 .corouselDots {
     flex-direction: column;
     position: absolute;
-    top: 47%;
+    top: 26%;
     display: flex;
-    left: 100%;
+    left: 105%;
     align-items: center;
     justify-content: center;
 }
@@ -203,6 +203,7 @@
 }
 
 @media (max-width:700px) {
+
     .rp p {
         font-size: 0.6em;
     }
@@ -214,10 +215,6 @@
     .projectHeading {
         top: -30%
     }
-}
-
-@media (max-width:700px) {
-
     .project1,
     .project2,
     .project3 {
@@ -236,6 +233,7 @@
 
     .usedTools i {
         margin-bottom: 50%;
+        font-size: 0.7em;
     }
 
     .rp {
@@ -263,8 +261,8 @@
     }
 
     .corouselDots {
-        top: 39%;
-        left: 88%;
+        top: 32%;
+        left: 96%;
     }
 
     .prevDiv,
@@ -279,6 +277,9 @@
 
     .nextDiv {
         transform: rotate(90deg) translateX(120%);
+    }
+    .footer{
+        position: sticky;
     }
 }
 
