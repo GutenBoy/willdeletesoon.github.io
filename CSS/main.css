@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.15s ease;
+    transition: 0.1s ease;
 }
 
 .mouseDot {
@@ -49,7 +49,7 @@ body {
     background-color: black;
     width: 0.4em;
     height: 0.4em;
-    transition: 0.1s ease;
+    transition: 0.05s ease;
     position: absolute;
     top: 42%;
     left: 40.5%;
@@ -175,8 +175,6 @@ body {
     font-size: 1rem;
     font-weight: bolder;
     font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-    position: relative;
 }
 .logoContainer a {
     text-decoration: none;
@@ -254,7 +252,7 @@ body {
         bottom: 3%;
     }
     .logoContainer{
-        top: 15%;
+        top: 20%;
     }
     .mouseHead{
         display: none;

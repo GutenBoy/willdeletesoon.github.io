@@ -17,8 +17,8 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     line-height: 1.5;
 }
@@ -53,6 +53,16 @@
     border-radius: 2px;
 }
 
+.frame {
+    width: 22em;
+    height: 62vh;
+    position: absolute;
+    left: 3%;
+    border: 10px solid black;
+    z-index: -1;
+
+}
+
 .aboutMe {
     display: flex;
     flex-direction: row;
@@ -69,9 +79,13 @@
 }
 
 @media (max-width:700px) {
-    .a1{
+    #AboutMe{
+        justify-content: initial;
+    }
+    .a1 {
         width: 65vw;
     }
+
     .a2 {
         width: 25em;
         font-size: 0.6em;
@@ -79,12 +93,11 @@
 
     .aboutMe {
         flex-direction: column;
-
         margin-bottom: 10vw;
     }
 
     .myImage {
-        margin-top: 20em;
+        margin-top: 10em;
     }
 
     #AboutMe {
@@ -92,7 +105,12 @@
     }
 
     .myImage img {
-        width: 65vw;
+        width: 80vw;
+    }
+    .frame{
+        width: 80vw;
+        height: 40vh;
+        top: 17%;
     }
 
     .descriptionSection {
@@ -110,6 +128,10 @@
         font-size: 0.8em;
     }
 }
-.footer{
-position:fixed;
+
+@media (max-width:500px) {
+    .myImage {
+        margin-top: 7em;
+    }
+
 }

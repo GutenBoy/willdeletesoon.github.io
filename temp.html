@@ -8,68 +8,57 @@
     <title>Document</title>
     <style>
         body {
+            overflow: hidden;
+        }
+
+        .dotsgoing2{
+            width: fit-content;
+            height: fit-content;
+            flex-wrap: wrap;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            min-height: 95vh;
+            transform:translateX(-100em);
         }
-
-        .parall1,
-        .parall2,
-        .parall3,
-        .parall4 {
-            width: 50px;
-            height: 7px;
-            background-color: white;
-            margin: 12px -9px 12px -10px;
-        }
-
-        .parall1{
-            transform: rotate(-45deg);
-        }
-
-        .parall4{
-            transform: rotate(135deg);
-        }
-        .parall2{
-            transform: rotate(45deg);
-        }
-        .parall3{
-            transform: rotate(-135deg);
-        }
-        .parall12,
-        .parall34 {
+        .dotsgoing {
+            width: fit-content;
+            height: fit-content;
             display: flex;
-            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            transform: translateY(50em);
         }
 
-        .parent {
-            position: relative;
-        }
-
-        p {
-            left: 40%;
-            position: absolute;
-            top: 9%;
-            font-family: 'Noto Sans JP', sans-serif;
-
-        }
-
-        .add{
-            animation: aniimate 0.4s linear;
-            transition: 0.3s ease;
+        .dots {
+            border-radius: 100%;
+            width: 0.5em;
+            height: 0.5em;
             background-color: black;
-            width: 0px;
-            height: 7px;
-            animation-fill-mode: forwards;
+            margin: 60px;
         }
-        @keyframes aniimate {
-            0%{
 
+        .animate {
+            animation: animate 4s infinite;
+            transition: 0.5s ease;
+        }
+
+        @keyframes animate {
+            0% {}
+
+            100% {
+                transform: translateY(-50em);
             }
+
+        }
+        .animate2{
+            animation: animate2 4s infinite;
+            transition: 0.5s ease;
+        }
+        @keyframes animate2 {
+            0%{}
             100%{
-                width: 50px;
+                transform: translateX(100em);
             }
             
         }
@@ -77,43 +66,125 @@
 </head>
 
 <body>
-    <div class="parent">
-        <div class="parall12">
-            <div class="parall1">
-                <div class="child1">
-
-                </div>
-
-            </div>
-            <div class="parall2">
-                <div class="child2"></div>
-            </div>
-        </div>
-        <div class="parall34">
-            <div class="parall3">
-                <div class="child3"></div>
-            </div>
-            <div class="parall4">
-                <div class="child4"></div>
-            </div>
-        </div>
-        <p>A</p>
+    <div class="dotsgoing">
+        <div class="dots dot1"></div>
+        <div class="dots dot2"></div>
+        <div class="dots dot3"></div>
+        <div class="dots dot4"></div>
+        <div class="dots dot5"></div>
+        <div class="dots dot6"></div>
+        <div class="dots dot7"></div>
+        <div class="dots dot8"></div>
+        <div class="dots dot9"></div>
+        <div class="dots dot10"></div>
+        <div class="dots dot11"></div>
+        <div class="dots dot12"></div>
+        <div class="dots dot13"></div>
+        <div class="dots dot14"></div>
+        <div class="dots dot15"></div>
+        <div class="dots dot16"></div>
+        <div class="dots dot17"></div>
+        <div class="dots dot18"></div>
+        <div class="dots dot19"></div>
+        <div class="dots dot20"></div>
+        <div class="dots dot21"></div>
+        <div class="dots dot22"></div>
+        <div class="dots dot23"></div>
+        <div class="dots dot24"></div>
+        <div class="dots dot25"></div>
+        <div class="dots dot26"></div>
+        <div class="dots dot27"></div>
+        <div class="dots dot28"></div>
+        <div class="dots dot29"></div>
+        <div class="dots dot30"></div>
+        <div class="dots dot31"></div>
+        <div class="dots dot32"></div>
+        <div class="dots dot33"></div>
+        <div class="dots dot34"></div>
+        <div class="dots dot35"></div>
+        <div class="dots dot36"></div>
+        <div class="dots dot37"></div>
+        <div class="dots dot38"></div>
+        <div class="dots dot39"></div>
+        <div class="dots dot40"></div>
+        <div class="dots dot41"></div>
+        <div class="dots dot42"></div>
+        <div class="dots dot43"></div>
+        <div class="dots dot44"></div>
+        <div class="dots dot45"></div>
+        <div class="dots dot46"></div>
+        <div class="dots dot47"></div>
+        <div class="dots dot48"></div>
+        <div class="dots dot49"></div>
+        <div class="dots dot50"></div>
+        <div class="dots dot47"></div>
+        <div class="dots dot48"></div>
+        <div class="dots dot49"></div>
+        <div class="dots dot50"></div>
     </div>
-
+    <div class="dotsgoing2">
+        <div class="dots dot1"></div>
+        <div class="dots dot2"></div>
+        <div class="dots dot3"></div>
+        <div class="dots dot4"></div>
+        <div class="dots dot5"></div>
+        <div class="dots dot6"></div>
+        <div class="dots dot7"></div>
+        <div class="dots dot8"></div>
+        <div class="dots dot9"></div>
+        <div class="dots dot10"></div>
+        <div class="dots dot11"></div>
+        <div class="dots dot12"></div>
+        <div class="dots dot13"></div>
+        <div class="dots dot14"></div>
+        <div class="dots dot15"></div>
+        <div class="dots dot16"></div>
+        <div class="dots dot17"></div>
+        <div class="dots dot18"></div>
+        <div class="dots dot19"></div>
+        <div class="dots dot20"></div>
+        <div class="dots dot21"></div>
+        <div class="dots dot22"></div>
+        <div class="dots dot23"></div>
+        <div class="dots dot24"></div>
+        <div class="dots dot25"></div>
+        <div class="dots dot26"></div>
+        <div class="dots dot27"></div>
+        <div class="dots dot28"></div>
+        <div class="dots dot29"></div>
+        <div class="dots dot30"></div>
+        <div class="dots dot31"></div>
+        <div class="dots dot32"></div>
+        <div class="dots dot33"></div>
+        <div class="dots dot34"></div>
+        <div class="dots dot35"></div>
+        <div class="dots dot36"></div>
+        <div class="dots dot37"></div>
+        <div class="dots dot38"></div>
+        <div class="dots dot39"></div>
+        <div class="dots dot40"></div>
+        <div class="dots dot41"></div>
+        <div class="dots dot42"></div>
+        <div class="dots dot43"></div>
+        <div class="dots dot44"></div>
+        <div class="dots dot45"></div>
+        <div class="dots dot46"></div>
+        <div class="dots dot47"></div>
+        <div class="dots dot48"></div>
+        <div class="dots dot49"></div>
+        <div class="dots dot50"></div>
+        <div class="dots dot47"></div>
+        <div class="dots dot48"></div>
+        <div class="dots dot49"></div>
+        <div class="dots dot50"></div>
+    </div>
     <script>
-        document.querySelector(".child2").classList.add("add");
+       
+       
+       document.querySelector(".dotsgoing").classList.add("animate"); 
         setTimeout(() => {
-            document.querySelector(".child4").classList.add("add");
-            
-            setTimeout(() => {
-                document.querySelector(".child3").classList.add("add");
-                setTimeout(() => {
-                    document.querySelector(".child1").classList.add("add");
-                }, 300);
-            }, 300);
-            
-        }, 300);
-
+            document.querySelector(".dotsgoing2").classList.add("animate2");
+        }, 4000);
     </script>
 </body>
 
