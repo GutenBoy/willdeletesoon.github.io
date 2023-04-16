@@ -29,7 +29,7 @@
 }
 
 .a2 {
-    width: 40em;
+    width: 50em;
     text-align: justify;
     position: relative;
 }
@@ -48,21 +48,25 @@
     border-radius: 2px;
 }
 
+.myImage{
+    position: relative;
+    margin-top: 3%;
+}
 .myImage img {
     width: 18em;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .frame {
-    width: 22em;
-    height: 62vh;
+    width: 20em;
+    height: 105%;
     position: absolute;
-    left: 3%;
+    left: -15%;
+    top: -3%;
+    margin-bottom: 5px;
     border: 10px solid black;
     z-index: -1;
-
 }
-
 .aboutMe {
     display: flex;
     flex-direction: row;
@@ -84,6 +88,7 @@
     }
     .a1 {
         width: 65vw;
+        margin-top: 10%;
     }
 
     .a2 {
@@ -108,9 +113,8 @@
         width: 80vw;
     }
     .frame{
-        width: 80vw;
-        height: 40vh;
-        top: 17%;
+        width: 81vw;
+        top: -3%;
     }
 
     .descriptionSection {
