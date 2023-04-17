@@ -21,7 +21,7 @@ body {
 
 /* CUSTOM MOUSE ANIMATION STYLING CSS */
 
-.mouseHead{
+.mouseHead {
     position: absolute;
     left: 17px;
     top: 4px;
@@ -110,10 +110,35 @@ body {
     align-items: center;
 }
 
-#NavBar ul li a:hover{
+#NavBar ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #facf0f;
+    top: 0%;
+    left: 0%;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+#NavBar ul li a:hover::before {
     transition: 0.2s ease-in;
-    transform: translateY(-2.5px);
     color: #facf0f;
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+@keyframes lia {
+    0% {
+        width: 3%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
 }
 
 
@@ -164,6 +189,7 @@ body {
     top: 20px;
     font-family: 'Noto Sans JP', sans-serif;
 }
+
 .logo img {
     margin-left: 2px;
     width: 40px;
@@ -177,6 +203,7 @@ body {
     font-weight: bolder;
     font-family: 'Roboto', sans-serif;
 }
+
 .logoContainer a {
     text-decoration: none;
 }
@@ -254,15 +281,19 @@ body {
     .socialSection {
         bottom: 3%;
     }
-    .logoContainer{
+
+    .logoContainer {
         top: 20%;
     }
-    .mouseHead{
+
+    .mouseHead {
         display: none;
     }
+
     .onloadShow {
         left: 40% !important;
     }
+
     .one,
     .two,
     .three {
@@ -270,10 +301,11 @@ body {
         width: 1rem !important;
         height: 1rem !important;
     }
+
     .footer p {
         font-size: 0.5em;
     }
-    
+
 }
 
 
@@ -354,13 +386,15 @@ body {
     50% {
         width: 100vw;
     }
-    75%{
+
+    75% {
         position: absolute;
         right: 0%;
         top: 0%;
         width: 50%;
     }
-    100%{
+
+    100% {
         position: absolute;
         right: 0%;
         top: 0%;
@@ -378,7 +412,7 @@ body {
     0% {
         opacity: .2;
     }
-   
+
     75% {
         opacity: .5;
     }

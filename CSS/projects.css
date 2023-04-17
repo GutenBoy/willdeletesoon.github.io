@@ -86,6 +86,13 @@
     top: -5em;
     right: 2em;
     font-family: 'Noto Sans JP', sans-serif;
+    background-color: #facf0f;
+    width: 15vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 
 /* TOOLS USED */
@@ -101,6 +108,8 @@
     width: 30px;
     margin: 20%;
 }
+
+
 
 /* COROUSEL SLIDING STYLES */
 
@@ -159,15 +168,12 @@
 
 /* JAVA SCRIPT CLASSES FOR PROJECT PAGE */
 
-.active {
+.active{
     transition: 0.2s ease;
     background-color: #facf0f !important;
     width: 0.8em !important;
     height: 0.8em !important;
 }
-
-
-
 
 
 
@@ -181,6 +187,9 @@
 
     .nextDiv {
         transform: rotate(90deg) translateX(300%);
+    }
+    .projectHeading{
+        width: 22vw;
     }
 
 }
@@ -213,7 +222,11 @@
     }
 
     .projectHeading {
-        top: -30%
+        top: -30%;
+        width: fit-content;
+        height: fit-content;
+        font-size: 0.8em;
+        background-color: transparent;
     }
     .project1,
     .project2,

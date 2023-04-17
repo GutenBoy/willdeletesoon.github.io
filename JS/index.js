@@ -103,17 +103,35 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
 
     // ANIMATION TO SHOW A HOVER OVER THE MAIN TEXT IN HOME PAGE
 
+    // var count = 0;
 
-    for (var i = 0; i < 19; i++) {
-        $(".doin")[i].addEventListener('mouseover', myFunc);
-    }
+    // setInterval(() => {
+    //     if(count > 6){
+    //         setTimeout(() => {
+    //             for(var v = 0;v<6;v++)
+    //             {
+    //                 document.querySelectorAll(".shaik .doin")[i].classList.remove("textinc");
+    //             }
+    //         }, 500);
+    //         count = 0;
+    //     }
+    //     document.querySelectorAll(".shaik .doin")[count].classList.add("textinc");
+    //     count++;
+    // }, 200);
 
-    function myFunc(e) {
-        $(this).addClass("textinc");
-        setTimeout(function () {
-            $(".doin").removeClass("textinc");
-        }, 3000);
-    }
+
+    // for (var i = 0; i < 19; i++) {
+    //     $(".doin")[i].addEventListener('mouseover', myFunc);
+    // }
+
+    // function myFunc(e) {
+    //     // alert("HELLO");
+    //     $("this").css({"font-size":"3em"});
+    //     // $(this).addClass("textinc");
+    //     // setTimeout(function () {
+    //     //     $(".doin").removeClass("textinc");
+    //     // }, 3000);
+    // }
 
 
     // CONTACT BUTTON SLIDING INFINETLY
@@ -149,9 +167,6 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
 
 
     //     }, 100);
-
-
-
 
     // FIXING THE TEXT LENGTH FOR MOBILE DEVICES
 

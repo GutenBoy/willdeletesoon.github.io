@@ -55,6 +55,7 @@ body{
     margin:1px;
     display: flex;
     font-family: 'Noto Sans JP', sans-serif;
+    transition: 0.5s ease;
 }
 .am{
     margin-top: 2%;
@@ -355,11 +356,11 @@ form {
     
 }
 
-.textinc{
+/* .textinc{
     animation-name: incanddec;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    transition: 0.1s ease;
+    transition: 0.5s ease;
 }
 
 @keyframes incanddec {
@@ -376,7 +377,7 @@ form {
         font-size: 4rem;
     }
     
-}
+} */
 
 .down{
     transition: 0.3s ease-in;
