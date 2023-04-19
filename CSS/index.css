@@ -15,10 +15,9 @@ body{
 }
 
 /* HOME */
-
 #Home{
     width: 100vw;
-    height: 97vh;
+    height: 97%;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -32,15 +31,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    letter-spacing: 3px;
     line-height: 1.5;
-    margin-top: 6%;
+    margin-top: 7%;
 }
 
 .hey,.azeem{
+    color: #252D37;
     display: flex;
     z-index: 2;
-    transform: translateY(-10vh);
+    transform: translateY(-20vh);
     font-size: 4em;
 }
 .shaik{
@@ -61,11 +60,16 @@ body{
     margin-top: 2%;
     text-align: justify;
     text-align-last: center;
-    font-size: 1rem;
     line-height: 1.8;
-    color: #313131;;
-    font-family: 'Roboto Condensed', sans-serif;
 }
+.am p{
+    font-family: "SourceSansPro-Black", Helvetica, Arial;
+    letter-spacing: 1px;
+    color: #313131;
+    opacity: .7;
+}
+
+
 
 /* SOCIAL SECTION */
 
