@@ -1,7 +1,3 @@
-
-
-
-
 // JQEURY/JS COMMON TO EVERY PAGE
 
 // JAVA SCRIPT FOR LOADER COMMON TO EVERY WEBPAGE
@@ -44,6 +40,9 @@ $(document).ready(function () {
     $(".hey").addClass("down");
     $(".azeem").addClass("down");
     $(".contactMe").addClass("contactslide");
+    setTimeout(() => {
+        $(".slidingButton").addClass("contactZooming");
+    }, 500);
 });
 
 
@@ -172,7 +171,8 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
 
     const am = window.matchMedia("(max-width: 700px)");
     if (am.matches) {
-        $(".azeem").html("I'M AZEEM");
+        $(".azeem").html("<div class='new'>I'M <l1>AZEEM.</l1></div>");
+        $(".slidingButton").removeClass("contactZooming");
     }
 
     // CONTACT FORM DISPLAYING

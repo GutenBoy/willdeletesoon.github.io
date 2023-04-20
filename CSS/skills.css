@@ -212,7 +212,7 @@
 }
 @keyframes skillButtonSlide {
     0%{
-        transform: translateY(-100%);
+        transform: translateY(-250%);
     }
     100%{
         transform: translateY(0%);

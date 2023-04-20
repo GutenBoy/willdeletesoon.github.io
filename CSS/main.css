@@ -1,5 +1,3 @@
-/* THIS IS A COMMON CSS FILE WHICH IS ACCESSIBLE FROM EVERY PAGE */
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
@@ -25,6 +23,8 @@ body {
     position: absolute;
     left: 17px;
     top: 4px;
+    pointer-events: none;
+    z-index: 4;
 }
 
 .mouseOutAndDot {
@@ -84,7 +84,6 @@ body {
 #NavBar {
     position: fixed;
     background-color: #f4f5f6;
-    /* backdrop-filter: blur(10px); */
     width: 100vw;
     height: 12vh;
     z-index: 3;
@@ -175,6 +174,15 @@ body {
 #NavBar .hamBurgerClose {
     transform: translateX(225px);
     right: 2%;
+}
+.borderBottom{
+    position: absolute;
+    top: 95%;
+    width: 100vw;
+}
+.fillBottom{
+    background-color: #facf0f;
+    height: 0.5vh;
 }
 
 
@@ -373,8 +381,8 @@ body {
 }
 
 .fill {
-    animation: fillBottom 1.5s ease-in;
-    transition: 0.5s ease-in;
+    animation: fillBottom 2.5s ease-in;
+    transition: 0.5s linear;
     width: 0vw;
 }
 
@@ -387,14 +395,14 @@ body {
         width: 100vw;
     }
 
-    75% {
+    /* 75% {
         position: absolute;
         right: 0%;
         top: 0%;
-        width: 50%;
-    }
+        width: 0%;
+    } */
 
-    100% {
+    75% {
         position: absolute;
         right: 0%;
         top: 0%;

@@ -320,6 +320,15 @@ form {
 
 /* JAVA SCRIPT USING CLASSES */
 
+
+l1{
+    color: #facf0f;
+    opacity: .7;
+    /* display: flex; */
+}
+.new{
+    font-family: 'Noto Sans JP', sans-serif;
+}
 /* .contactInfiniteMove{
     animation: contactInfiniteMove 3s ease-in;
     transition: 0.5s ease;
@@ -382,6 +391,24 @@ form {
     }
     
 } */
+
+.contactZooming{
+    animation: contactZooming 4s linear infinite;
+    transition: 0.5s ease;
+}
+
+@keyframes contactZooming {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
 
 .down{
     transition: 0.3s ease-in;

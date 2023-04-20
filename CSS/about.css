@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
+
 /* ABOUT BLOCK  */
 
 .ABOUTTEXT {
@@ -32,6 +34,8 @@
     width: 50em;
     text-align: justify;
     position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2;
 }
 
 .a2 p {
@@ -55,6 +59,7 @@
 .myImage img {
     width: 18em;
     border-radius: 2px;
+    object-fit: contain;
 }
 
 .frame {
