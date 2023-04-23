@@ -14,15 +14,21 @@
 </head>
 
 <body id="HomePage">
-    <span class="onloadShow visibilityNone">
+    <span class="onloadShow displayNone">
         <div class="one round"></div>
         <div class="two round"></div>
         <div class="three round"></div>
     </span>
     <span class="contact">
-        <form action="/">
+        <div class="contactSideBlock">
+            <h1>CONTACT INFO</h1>
+            <p>Lorem, ipsutur adipisicing elit. Eligendi totam aliquam, labore fugiat doloremque enim illum atque
+                tempor.</p>
+            <p>Lorem ipsudi voluptates iusto doloribus consequatur est rerum ad fuga numquam tempore. Amet.</p>
+        </div>
+        <form action="http://localhost:3000/newroute" method="post">
             <div class="contactHeading">
-                <h1>Interested to work together? Let's talk</h1>
+                <!-- <h1>Interested to work together? Let's talk</h1> -->
             </div>
             <div class="closeForm">
                 <i class="fa-solid fa-xmark"></i>
@@ -41,7 +47,7 @@
                     rows="10"></textarea>
             </div>
             <div class="submit">
-                <input value="SUBMIT" type="submit" class="submitButton" onclick="remove()">
+                <input value="SUBMIT" type="submit" class="submitButton">
             </div>
         </form>
         <!-- <div class="locationBlock">
@@ -50,8 +56,8 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div> -->
     </span>
-    <div class="totalContainer visibilityNone">
-        <div class="mouseHead visibilityNone">
+    <div class="totalContainer displayNone">
+        <div class="mouseHead displayNone">
             <div class="mouseOutAndDot">
                 <div class="mouseOut">
                 </div>
@@ -78,7 +84,7 @@
             <div class="hamBurger hb">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="hamBurgerClose hb visibilityNone">
+            <div class="hamBurgerClose hb displayNone">
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="borderBottom">
@@ -88,13 +94,15 @@
             </div>
         </section>
         <section id="Home">
+            <div class="boyImage">
+                <img src="Images/try7.jpg" alt="">
+            </div>
             <div class="Name">
                 <div class="hey">
                     <div class="doin">H</div>
                     <div class="doin">E</div>
                     <div class="doin">Y</div>
                     <div class="doin">,</div>
-                    <!-- <p>Hi, My Name Is</p> -->
                 </div>
                 <div class="azeem">
                     <div class="doin">I</div>
@@ -120,6 +128,7 @@
                     <p data-text="introduction">Welcome To My Digital Home! As A Computer Science Student, I am Excited
                         To Share My Passion For Creating Innovative Digital Solutions With You. Take A Look At My
                         Projects And Accomplishments, And Feel Free To Reach Out To Me For Collaboration Or Inquiries
+                        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolorum soluta veritatis? -->
                     </p>
                 </div>
                 <div class="slidingButton">
@@ -138,9 +147,19 @@
             </div>
         </section>
         <div class="footer">
+            <!-- <div class="circle">
+            </div> -->
             <p>© 2023.Designed & Build by Azeem Shaik</p>
         </div>
     </div>
+    <script>
+        const el = document.querySelector("#Home");
+
+        el.addEventListener("mousemove", (e) => {
+            el.style.backgroundPositionX = -e.offsetX + "px";
+            el.style.backgroundPositionY = -e.offsetY + "px";
+        });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7f2a891619.js" crossorigin="anonymous"></script>
     <script src="JS/index.js"></script>

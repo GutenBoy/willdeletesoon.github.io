@@ -22,28 +22,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-#Home::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("../Images/try7.jpg") no-repeat center;
-    opacity: .6;
+    flex-direction: row;
 }
 
 .Name{
     width: 85%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     line-height: 1.5;
-    margin-top: 7%;
+    margin: 50px;
+    margin-top: 5em;
 }
 
 .hey,.azeem{
@@ -69,8 +57,7 @@ body{
 }
 .am{
     margin-top: 2%;
-    text-align: justify;
-    text-align-last: center;
+    text-align: left;
     line-height: 1.8;
 }
 .am p{
@@ -106,7 +93,12 @@ body{
     transform: translatey(-5%);
 }
 
+/* MIDDLE BOY IMAGE */
 
+.boyImage{
+    transition: 0.4s linear;
+    margin-left: 50px;
+}
 
 
 /* CONTACT */
@@ -116,8 +108,8 @@ body{
 .contactMe,.submitButton{
     border-radius: 5px;
     cursor: pointer;
-    width: 14em;
-    height: 8vh;
+    width: 11em;
+    height: 6vh;
     background-color: #facf0f;
     display: flex;
     justify-content: center;
@@ -125,8 +117,8 @@ body{
     padding: 4px;
     border: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    margin: 30px;
-    font-size: 0.8em;
+    margin-top: 20px;
+    font-size: 0.7em;
     box-shadow: 0px 1px 4px 0px rgb(55, 55, 55);
 }
 .contactMe:hover{
@@ -280,6 +272,11 @@ form {
         width: 20vw;
         font-size: calc(0.5vw + 1vh);
     }
+    .boyImage{
+        position: absolute;
+        margin-left: 0px;
+        opacity: .7;
+    }
     
 }
 
@@ -316,10 +313,14 @@ form {
     }
     .Name{
         align-items: normal;
-        margin-top: 0%;
+       margin: 0px;
+       margin-top: 10%;
     }
     .am{
         text-align-last: left;
+    }
+    .am p{
+        opacity: 0.9;
     }
     .contactMe{
         margin: 0px;
@@ -430,12 +431,8 @@ l1{
     0%{
         font-size: 3em;
     }
-    50%{
-        font-size: 3.5;
-    }
-
     100%{
-        font-size: 4em;
+        font-size: 3em;
         transform: translateY(0vh);
     }
     

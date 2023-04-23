@@ -42,6 +42,11 @@
     transition: 2s ease;
 }
 
+.skilldescription p{
+    font-family: "SourceSansPro-Black", Helvetica, Arial;
+    margin-bottom: 20px;
+}
+
 .heading button {
     display: flex;
     justify-content: center;

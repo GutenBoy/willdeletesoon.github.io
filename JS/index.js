@@ -5,19 +5,15 @@
 
 $(document).ready(function () {
 
-    $(".fillBottom").addClass("fill");
+    $(".fillBottom").addClass("fill"); //Border bottom line of the Navigation Bar.
 
     var a = $("body").attr("id");
 
-    $("." + a + " a").css({ "transform": "translateY(-2px)", "transition": "1s ease", "color": "#f6d334" });
+    $("." + a + " a").css({ "transform": "translateY(-2px)", "transition": "1s ease", "color": "#f6d334" }); //Adding translate for the present page navigation button.
 
     $("." + a).css({ "pointer-events": "none" });
 
-    $("." + a + " a").addClass("dotting");
-
-    $(".onloadShow").removeClass("visibilityNone");   //showing the three dots.
-
-
+    $(".onloadShow").removeClass("displayNone");   //showing the three dots.
     $(".one").addClass("onLoadAnimate");       //adding the Animation class to the three dots sequentially.
     setTimeout(function () {
         $(".two").addClass("onLoadAnimate");
@@ -26,24 +22,23 @@ $(document).ready(function () {
         }, 100);
     }, 100);
 
-
     setTimeout(function () {
-        $(".onloadShow").addClass("visibilityNone");    //removing the three dots.
-        $(".totalContainer").removeClass("visibilityNone");    //showing the document after loading the three dots animation.
+        $(".onloadShow").addClass("displayNone");    //removing the three dots.
+        $(".totalContainer").removeClass("displayNone");   //showing the document after loading the three dots animation.
         $(".totalContainer").addClass("opacityOnLoad");
-        $(".mouseHead").removeClass("visibilityNone");
+        $(".mouseHead").removeClass("displayNone");
         $(".footer").addClass("footerUp");
         $(".skilldescription").addClass("skillDescriptionSlide");
         $(".heading button").addClass("skillButtonSlide");
     }, 500);
 
+
     $(".hey").addClass("down");
     $(".azeem").addClass("down");
     $(".contactMe").addClass("contactslide");
-    setTimeout(() => {
-        $(".slidingButton").addClass("contactZooming");
-    }, 500);
+
 });
+
 
 
 // CUSTOM MOUSE JAVASCRIPT
@@ -58,31 +53,30 @@ const moveCursor = (e) => {
 }
 window.addEventListener('mousemove', moveCursor);
 
-
-
-
 // MINIMUM NAVIGATION BAR TOGGLING CLASSES 
 
 
 function togglingClasses() {
-    $("#Skills").toggleClass("visibilityNone");
-    $("#AboutMe").toggleClass("visibilityNone");
-    $("#Projects").toggleClass("visibilityNone");
-    $(".socialSection").toggleClass("visibilityNone");
-    $(".Name").toggleClass("visibilityNone");
+    $("#Skills").toggleClass("displayNone");
+    $("#AboutMe").toggleClass("displayNone");
+    $("#Projects").toggleClass("displayNone");
+    $(".socialSection").toggleClass("displayNone");
+    $(".Name").toggleClass("displayNone");
     $(".totalContainer").toggleClass("background");
-    $(".hamBurger").toggleClass("visibilityNone");
-    $(".hamBurgerClose").toggleClass("visibilityNone");
+    $(".hamBurger").toggleClass("displayNone");
+    $(".hamBurgerClose").toggleClass("displayNone");
 }
 
 $(".hamBurger").click(function () {
     togglingClasses();
+    $(".boyImage").css({ "opacity": "1" });
     $("#NavBar ul").addClass("navSlide-out");
     $(".hamBurgerClose").addClass("navSlide-out");
     $("#NavBar ul").removeClass("navSlide-in");
     $(".hamBurgerClose").removeClass("navSlide-in");
 });
 $(".hamBurgerClose").click(function () {
+    $(".boyImage").css({ "opacity": "0.7" });
     $("#NavBar ul").removeClass("navSlide-out");
     $(".hamBurgerClose").removeClass("navSlide-out");
     $("#NavBar ul").addClass("navSlide-in");
@@ -131,6 +125,26 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
     //     //     $(".doin").removeClass("textinc");
     //     // }, 3000);
     // }
+
+    $(".doin").on("mouseover", () => {
+        // document.querySelector(this);
+        $(".doin").css({ "tranform": "translateY(-10px)" });
+        // console.log($(this),"HELLO");
+    });
+
+
+    //Guy with a laptop image parallax movement
+
+    var x_value, y_value;
+
+    const element = document.querySelector("#Home");
+
+    element.addEventListener("mouseover", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        const boy = document.querySelector(".boyImage");
+        boy.style.transform = `translate3d(${x / 70}px, ${y / 70}px,0)`;
+    })
 
 
     // CONTACT BUTTON SLIDING INFINETLY
@@ -182,14 +196,14 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
         $("body").toggleClass("bgimage");
         $(".contact").slideUp();
         setTimeout(function () {
-            $(".totalContainer").toggleClass("visibilityNone");
+            $(".totalContainer").toggleClass("displayNone");
         }, 500);
     });
     function showForm() {
         $("body").toggleClass("bgimage");
         $(".contact").css("visibility", "visible");
-        $(".contact").removeClass("visibilityNone");
-        $(".totalContainer").addClass("visibilityNone");
+        $(".contact").removeClass("displayNone");
+        $(".totalContainer").addClass("displayNone");
         $(".contact").slideDown();
     }
 
@@ -204,11 +218,11 @@ else if (window.location.pathname.includes("/skills.html")) {
     if (skill.matches) {
 
         $(".iconshead").addClass("skillDescriptionSlide");
-        $(".skilldescription").addClass("visibilityNone");
+        $(".skilldescription").addClass("displayNone");
         function openSkillDescription() {
             $(".heading button").toggleClass("background2");
-            $(".skilldescription").toggleClass("visibilityNone");
-            $(".iconshead").toggleClass("visibilityNone");
+            $(".skilldescription").toggleClass("displayNone");
+            $(".iconshead").toggleClass("displayNone");
             $(".iconshead").toggleClass("skillDescriptionSlide");
         }
     }
@@ -238,13 +252,13 @@ else if (window.location.pathname.includes("/projects.html")) {
     ShowProject(start);
 
     function ShowProject(count) {
-        var showing = $(".project" + count).removeClass("visibilityNone");
+        var showing = $(".project" + count).removeClass("displayNone");
     }
 
 
     function restartAnimation(addend, next) {
         for (var i = 1; i < 4; i++) {
-            $(".project" + i).addClass("visibilityNone");
+            $(".project" + i).addClass("displayNone");
             $(".corouselDots .dot" + i).removeClass("active");
             $(".project" + i).removeClass("slideDown");
             $(".project" + i).removeClass("slideUp");
@@ -259,7 +273,7 @@ else if (window.location.pathname.includes("/projects.html")) {
 
     function makeProjectActive(dotNumber) {
         restartAnimation();
-        $(".project" + dotNumber).removeClass("visibilityNone");
+        $(".project" + dotNumber).removeClass("displayNone");
         $(".corouselDots .dot" + dotNumber).addClass("active");
     }
     function moveProject(addend) {
@@ -274,5 +288,21 @@ else if (window.location.pathname.includes("/projects.html")) {
         $(".corouselDots .dot" + start).addClass("active");
         ShowProject(start);
     }
+
+    var x_value, y_value;
+
+    const element = document.querySelector("#ProjectPage");
+
+    element.addEventListener("mouseover", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        const projectPhoto1 = document.querySelector(".lp1 img");
+        const projectPhoto2 = document.querySelector(".lp2 img");
+        const projectPhoto3 = document.querySelector(".lp3 img");
+        projectPhoto1.style.transform = `translate3d(${x / 20}px, ${y / 20}px,0)`;
+        projectPhoto2.style.transform = `translate3d(${x / 20}px, ${y / 20}px,0)`;
+        projectPhoto3.style.transform = `translate3d(${x / 20}px, ${y / 20}px,0)`;
+        console.log("HELLO");
+    })
 
 }

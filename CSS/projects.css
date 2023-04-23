@@ -65,8 +65,9 @@
     justify-content: center;
     align-items: center;
     text-align: justify;
-    background-color: #e0e0e0;
+    background-color: #e8e8e8;;
     border-radius: 5px;
+    /* border: 1px solid black; */
 }
 
 .rp p {
@@ -79,6 +80,8 @@
 .lp .img {
     width: 30em;
     border-radius: 5px;
+    border: 2px solid black;
+    transition: 0.5s linear;
 }
 
 .projectHeading {
@@ -128,13 +131,6 @@
     border: 0px solid black;
 
 }
-
-.nextDiv:hover,
-.prevDiv:hover {
-    transition: 1s ease;
-    background-color: #ffec96;
-}
-
 .nextDiv {
     transform: rotate(90deg) translateX(250%)
 }
@@ -312,7 +308,7 @@
 
 
 .slideDown {
-    animation: slideDown 0.7s ease;
+    animation: slideDown 1.2s ease;
     transition: 0.5s ease;
 }
 
@@ -334,8 +330,9 @@
 }
 
 .slideUp {
-    animation: slideUp 0.7s ease;
+    animation: slideUp 1.2s ease;
     transition: 0.5s ease;
+    /* animation-direction: alternate-reverse; */
 }
 
 @keyframes slideUp {
