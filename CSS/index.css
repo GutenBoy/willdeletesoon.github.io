@@ -25,6 +25,17 @@ body{
     flex-direction: column;
 }
 
+#Home::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../Images/try7.jpg") no-repeat center;
+    opacity: .6;
+}
+
 .Name{
     width: 85%;
     display: flex;
@@ -36,7 +47,7 @@ body{
 }
 
 .hey,.azeem{
-    color: #252D37;
+    color: #181d22;
     display: flex;
     z-index: 2;
     transform: translateY(-20vh);
@@ -65,7 +76,7 @@ body{
 .am p{
     font-family: "SourceSansPro-Black", Helvetica, Arial;
     letter-spacing: 1px;
-    color: #313131;
+    color: #191818;
     opacity: .7;
 }
 
@@ -421,7 +432,6 @@ l1{
     }
     50%{
         font-size: 3.5;
-        transform: translateY(1vh);
     }
 
     100%{
