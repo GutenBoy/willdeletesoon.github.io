@@ -61,7 +61,7 @@ body{
     line-height: 1.8;
 }
 .am p{
-    font-family: "SourceSansPro-Black", Helvetica, Arial;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     color: #191818;
     opacity: .7;
@@ -269,7 +269,7 @@ form {
 @media (max-width:900px) {
     .contactMe{
         height: 7vh;
-        width: 20vw;
+        width: 15vw;
         font-size: calc(0.5vw + 1vh);
     }
     .boyImage{
@@ -282,8 +282,8 @@ form {
 
 @media (max-width:540px) {
     .contactMe{
-        width: 15em;
-        height: 5vh;
+        width: 10em;
+        height: 4vh;
         font-size: calc(0.5vw + 0.8vh);
     }
     .submitButton{
@@ -335,32 +335,10 @@ form {
 
 l1{
     color: #facf0f;
-    opacity: .7;
-    /* display: flex; */
 }
 .new{
     font-family: 'Noto Sans JP', sans-serif;
 }
-/* .contactInfiniteMove{
-    animation: contactInfiniteMove 3s ease-in;
-    transition: 0.5s ease;
-}
-
-@keyframes contactInfiniteMove {
-    0%{
-        transform: translateX(0px);
-    }
-    25%{
-        transform: translateX(50px);
-    }
-    75%{
-        transform: translateX(-50px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-} */
-
 
 .contactslide{
     animation: cslideup 1s ease;
