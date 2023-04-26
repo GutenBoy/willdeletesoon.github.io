@@ -230,19 +230,16 @@
         flex-direction: column;
         margin-top: 0%;
         height: 50vh;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .usedTools {
-        position: static;
-        flex-direction: column;
-        margin-left: 10%;
-        margin-top: 5%;
+        display: none;
     }
 
     .usedTools img {
         margin-bottom: 50%;
-        width: 20px;
+        width: 15px;
     }
 
     .rp {
@@ -256,7 +253,7 @@
         left: 0%;
         right: 0%;
         bottom: 0%;
-        margin-bottom: 5%;
+        /* margin-bottom: 5%; */
     }
 
     .corouselDots button {
