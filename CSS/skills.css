@@ -1,18 +1,7 @@
-/* ABOUT PAGE */
-.SKILLTEXT {
-    font-size: 11em;
-    color: black;
-    position: absolute;
-    top: 10%;
-    right: 2%;
-    opacity: .1;
-}
 
 /* ABOUT SECTION MIDDLE */
 
 #Skills{
-    /* background-color: white; */
-    /* background: url("../Images/try4.jpg") no-repeat center/cover; */
     height: 95vh;
     width: 100vw;
     display: flex;
@@ -34,7 +23,7 @@
 
 .skilldescription {
     width: 40vw;
-    line-height: 1.7;
+    line-height: 1.5;
     position: absolute;
     top: 21%;
     left: 8%;
@@ -178,6 +167,9 @@
 
 .icons {
     margin-left: 11%;
+}
+.cricket{
+    width: 80%;
 }
 
 

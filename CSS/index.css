@@ -1,20 +1,6 @@
-body{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.HOMETEXT {
-    font-size: 10em;
-    color: #313131;
-    position: absolute;
-    top: 37%;
-    left:10%;
-    opacity: .1;
-}
 
 /* HOME */
+
 #Home{
     width: 100vw;
     height: 97%;
@@ -24,7 +10,6 @@ body{
     align-items: center;
     flex-direction: row;
 }
-
 .Name{
     width: 85%;
     display: flex;
@@ -81,6 +66,7 @@ body{
     left: 0%;
     bottom: 6%;
     box-shadow: 0px 2px 10px 1px #7a7373;
+    transform: translateX(-100%);
 }
 .socialSection a{
     margin: 2.5vh 1vw;
@@ -101,7 +87,8 @@ body{
 }
 
 
-/* CONTACT */
+/* CONTACT FORM */
+
 .contactMe{
     transform: translateY(30vh);
 }
@@ -131,15 +118,18 @@ body{
 
 .contact {
     display: flex;
-    flex-direction: column;
     border-radius: 10px;
     background-color: white;
-    width: 70vw;
+    width: 50vw;
     justify-content: center;
     align-items: center;
-    height: fit-content;
-    position: relative;
-    visibility: hidden;
+    height: 70vh;
+    position: absolute;
+    /* visibility: hidden; */
+    border: 2px solid black;
+    z-index: 4;
+    transform: translateY(125%);
+    transition: 1s ease;
 }
 
 .contactform {
@@ -153,15 +143,19 @@ body{
 }
 
 .contactform input {
-    margin-bottom: 1rem;
     background-color: gainsboro;
-    width: 50vw;
+    width: 26vw;
     height: 5vh;
     margin-bottom: 1rem;
     border: 0;
     border-radius: 5px;
     padding: 0 15px;
     font-family: 'Roboto', sans-serif;
+
+}
+.closeForm:hover{
+    transition: 0.5s ease;
+    color: #facf0f;
 }
 .submit{
     display: flex;
@@ -174,11 +168,13 @@ body{
     background-color: gainsboro;
     border-radius: 5px;
     padding: 5px 15px;
+    height: 20vh;
+    width: 26vw;
 }
 
 input:focus,
 textarea:focus {
-    /* transition: 0.5s ease-in; */
+    transition: 0.2s ease;
     outline: none;
     border-bottom: 2px solid #facf0f;
 }
@@ -186,7 +182,7 @@ input:focus::placeholder,textarea:focus::placeholder{
     color: transparent;
 }
 .submitButton {
-    height: 6vh;
+    height: 5vh;
 }
 .submitButton:hover{
     transition: 0.5s ease-in;
@@ -206,12 +202,13 @@ input:focus::placeholder,textarea:focus::placeholder{
     margin-bottom: 5vh;
 }
 form {
-    margin-top: 10%;
-    margin-top: 10%;
     width: 50vw;
     font-size: 0.8rem;
     letter-spacing: 2px;
-    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 ::placeholder{
     font-size: 0.8rem;
@@ -227,6 +224,25 @@ form {
 /* MEDIA QUEIRIES FOR MIDDLE-CONTAINER */
 
 
+@media (max-width:700px) {
+    .azeem{
+        display: flex;
+        font-size: 4em;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: bolder;
+    }
+    .HOMETEXT{
+        font-size: 21vw;
+    }
+    .contact
+    {
+        width: 70vw;
+    }
+    .contactform input ,.contactform textarea{
+        width: 35vw;
+    }  
+}
+
 @media (max-width:450px) {
     .hey,.azeem{
         font-size: 3.5em!important;
@@ -239,6 +255,7 @@ form {
         font-size: 0.8em;
     }
 }
+
 @media (max-width:390px) {
     .hey,.azeem{
         font-size: 2.6em!important;
@@ -250,17 +267,6 @@ form {
         font-size: 0.5em;
     }
     
-}
-@media (max-width:700px) {
-    .azeem{
-        display: flex;
-        font-size: 4em;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: bolder;
-    }
-    .HOMETEXT{
-        font-size: 21vw;
-    }
 }
 
 
@@ -307,6 +313,7 @@ form {
         display: flex;
         justify-content: center;
         box-shadow: 0px 0px 0px 0px white;
+        transition: 5s ease!important;
     }
     .socialSection a{
         font-size: 1.2em;
@@ -358,6 +365,8 @@ l1{
     }
     
 }
+
+
 
 /* .textinc{
     animation-name: incanddec;
@@ -412,6 +421,21 @@ l1{
     100%{
         font-size: 3em;
         transform: translateY(0vh);
+    }
+    
+}
+
+.socialSectionSliding{
+    animation: socialSectionSliding 0.5s ease-in;
+    transition: 0.2s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes socialSectionSliding {
+    0%{
+
+    }
+    100%{
+        transform: translateX(0%);
     }
     
 }
