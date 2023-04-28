@@ -83,7 +83,11 @@
 
 .boyImage{
     transition: 0.4s linear;
-    margin-left: 50px;
+    margin: 4em;
+    margin-left: 5em;
+}
+.boyImage img{
+    width: 20em;
 }
 
 
@@ -125,7 +129,6 @@
     align-items: center;
     height: 70vh;
     position: absolute;
-    /* visibility: hidden; */
     border: 2px solid black;
     z-index: 4;
     transform: translateY(125%);
@@ -245,7 +248,7 @@ form {
 
 @media (max-width:450px) {
     .hey,.azeem{
-        font-size: 3.5em!important;
+        font-size: 3.8em;
     }
     .side img{
         width: 30px!important;
@@ -258,7 +261,7 @@ form {
 
 @media (max-width:390px) {
     .hey,.azeem{
-        font-size: 2.6em!important;
+        font-size: 3.7em;
     }
     .am p{
         font-size: 0.7em;
@@ -267,6 +270,12 @@ form {
         font-size: 0.5em;
     }
     
+}
+@media (max-width:350px) {
+
+    .hey,.azeem{
+        font-size: 3em;
+    }
 }
 
 
@@ -281,6 +290,7 @@ form {
     .boyImage{
         position: absolute;
         margin-left: 0px;
+        margin: 0px;
         opacity: .7;
     }
     

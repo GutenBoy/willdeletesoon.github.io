@@ -28,8 +28,8 @@ body {
 
 .mouseHead {
     position: absolute;
-    left: 17px;
-    top: 4px;
+    left: 1.3em;
+    top: 1.5em;
     pointer-events: none;
     z-index: 4;
 }
@@ -216,18 +216,21 @@ body {
 .logoContainer {
     display: flex;
     align-items: center;
-    position: absolute;
-    font-size: 1rem;
-    left: 20px;
-    top: 20px;
     font-family: 'Noto Sans JP', sans-serif;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    
 }
 
-.logo img {
-    margin-left: 2px;
-    width: 40px;
-    margin-top: 8px;
+.logoContainer img {
+    width: 2.5em;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .logoContainer p {
@@ -241,18 +244,20 @@ body {
     text-decoration: none;
 }
 
-.logo:hover {
+.logoContainer:hover {
     transition: 0.15s ease-in;
     border: 5px solid #facf0f;
 }
 
-.logo {
+.logoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 100%;
+    top: 30%;
+    left: 2%;
 }
 
 
@@ -311,7 +316,7 @@ body {
 
 @media (max-width:750px) {
     #NavBar {
-        height: 8vh;
+        height: 8.5vh;
     }
 
     .footer {
@@ -319,7 +324,7 @@ body {
     }
 
     .hb {
-        font-size: 3vh !important;
+        font-size: 4vh !important;
     }
 
     .socialSection {
@@ -327,7 +332,10 @@ body {
     }
 
     .logoContainer {
-        top: 20%;
+        top: 8%;
+    }
+    .logoContainer img{
+        width: 2em;
     }
 
     .mouseHead {
