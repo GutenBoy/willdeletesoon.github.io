@@ -11,6 +11,21 @@
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="icon" type="image/x-icon" sizes="200x200" href="Images/Logo.png">
     <link rel="stylesheet" href="https://kit.fontawesome.com/7f2a891619.css" crossorigin="anonymous">
+    <style>
+        .bgskillImage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: .8;
+            z-index: -1;
+        }
+
+        .bgskillImage img {
+            width: 27em;
+            opacity: .7;
+        }
+    </style>
 </head>
 
 <body id="SkillsPage">
@@ -29,9 +44,6 @@
     </div>
 
     <div class="totalContainer displayNone">
-        <div class="SKILLTEXT">
-            SKILLS.
-        </div>
         <section id="NavBar">
             <div class="logoContainer">
                 <div class="logo">
@@ -62,6 +74,9 @@
         </section>
         <section id="Skills">
             <div class="adjust">
+                <div class="bgskillImage">
+                    <img src="Images/try4.jpg" alt="">
+                </div>
                 <div class="heading">
                     <button class="skillButton" onclick="openSkillDescription()">MY SKILLS</button>
                 </div>
@@ -69,14 +84,15 @@
                     <div class="skilldescription">
                         <p>I have developed a diverse set of skills throughout my academic and personal pursuits. One
                             of my primary strengths is my proficiency in C,C++,JAVA,PYTHON,,HTML,CSS,JAVASCRIPT, which I
-                            have honed
-                            through coursework, research projects, and personal interests.
+                            have honed through coursework, research projects, and personal interests.
                         </p>
                         <p>
                             In addition to my technical skills, I also possess strong interpersonal and communication
                             skills. I am able to collaborate effectively with others and communicate complex ideas in a
                             clear and concise manner.I am a quick learner and am able to adapt to new situations and
-                            technologies with ease, Overall, I am confident in my abilities and am always seeking opportunities to further
+                            technologies with ease.
+                        </p>
+                        <p> Overall, I am confident in my abilities and am always seeking opportunities to further
                             develop and refine my skills.
                         </p>
                     </div>
@@ -177,7 +193,7 @@
                                     <img src="Images/cricket.png" alt="">
                                 </div>
                                 <div class="rating">
-                                    <div class="ratingFill jquery">
+                                    <div class="ratingFill cricket">
 
                                     </div>
                                 </div>
