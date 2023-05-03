@@ -36,7 +36,7 @@ $(document).ready(function () {
     $(".hey").addClass("down");
     $(".azeem").addClass("down");
     $(".contactMe").addClass("contactslide");
-
+    $(".socialSection").addClass("socialSectionSliding");
 });
 
 
@@ -46,8 +46,8 @@ $(document).ready(function () {
 const cursorOut = document.querySelector('.mouseOut');
 const cursorDot = document.querySelector('.mouseDot');
 const moveCursor = (e) => {
-    const MouseMoveY = e.clientY - 25;
-    const MouseMoveX = e.clientX - 35;
+    const MouseMoveY = e.clientY - 45;
+    const MouseMoveX = e.clientX - 40;
     cursorOut.style.transform = `translate3d(${MouseMoveX}px, ${MouseMoveY}px, 0)`;
     cursorDot.style.transform = `translate3d(${MouseMoveX}px, ${MouseMoveY}px, 0)`;
 }
@@ -59,12 +59,13 @@ window.addEventListener('mousemove', moveCursor);
 function togglingClasses() {
     $("#Skills").toggleClass("displayNone");
     $("#AboutMe").toggleClass("displayNone");
-    $("#Projects").toggleClass("displayNone");
+    $(".projects").toggleClass("displayNone");
     $(".socialSection").toggleClass("displayNone");
     $(".Name").toggleClass("displayNone");
     $(".totalContainer").toggleClass("background");
     $(".hamBurger").toggleClass("displayNone");
     $(".hamBurgerClose").toggleClass("displayNone");
+    
 }
 
 $(".hamBurger").click(function () {
@@ -143,7 +144,7 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
         const x = e.clientX;
         const y = e.clientY;
         const boy = document.querySelector(".boyImage");
-        boy.style.transform = `translate3d(${x / 70}px, ${y / 70}px,0)`;
+        boy.style.transform = `translate3d(${-(x / 70) * 0.5}px, ${-(y / 70) * 0.5}px,0)`;
     })
 
 
@@ -185,26 +186,29 @@ if (window.location.pathname.includes("/index.html") || (!window.location.pathna
 
     const am = window.matchMedia("(max-width: 700px)");
     if (am.matches) {
-        $(".azeem").html("<div class='new'>I'M <l1>AZEEM.</l1></div>");
+        $(".azeem").html("<div class='doin'>I'M&nbsp;<l1>AZEEM.</l1></div>");
         $(".slidingButton").removeClass("contactZooming");
     }
 
     // CONTACT FORM DISPLAYING
 
-    $(".contact").slideUp();
+    // $(".contact").slideUp();
     $(".closeForm").click(function () {
         $("body").toggleClass("bgimage");
-        $(".contact").slideUp();
-        setTimeout(function () {
-            $(".totalContainer").toggleClass("displayNone");
-        }, 500);
+        $(".contact").css({"transform":"translateY(125%)"});
+        // $(".contact").slideUp();/
+        // setTimeout(function () {
+        //     $(".totalContainer").toggleClass("displayNone");
+        // }, 500);
     });
     function showForm() {
-        $("body").toggleClass("bgimage");
+        // $("body").toggleClass("bgimage");
         $(".contact").css("visibility", "visible");
         $(".contact").removeClass("displayNone");
-        $(".totalContainer").addClass("displayNone");
-        $(".contact").slideDown();
+        // $(".contact").css("z-index","5");
+        $(".contact").css({"transform":"translateY(0%)"});
+        // $(".totalContainer").addClass("displayNone");
+        // $(".contact").slideDown();s
     }
 
 
@@ -242,6 +246,17 @@ else if (window.location.pathname.includes("/skills.html")) {
 }
 
 else if (window.location.pathname.includes("/about.html")) {
+
+    // var x_value, y_value;
+
+    // const aboutElement = document.querySelector("#AboutPage");
+
+    // aboutElement.addEventListener("mouseover", (e) => {
+    //     const x = e.clientX - window.innerWidth/2;
+    //     const y = e.clientY - window.innerHeight/2;
+    //     const about = document.querySelector(".myImage img");
+    //     about.style.transform = `translate3d(${-(x / 100)}px, ${-(y / 50)}px,0)`;
+    // });
 
 }
 
@@ -299,10 +314,10 @@ else if (window.location.pathname.includes("/projects.html")) {
         const projectPhoto1 = document.querySelector(".lp1 img");
         const projectPhoto2 = document.querySelector(".lp2 img");
         const projectPhoto3 = document.querySelector(".lp3 img");
-        projectPhoto1.style.transform = `translate3d(${x / 20}px, ${y / 20}px,0)`;
-        projectPhoto2.style.transform = `translate3d(${x / 20}px, ${y / 20}px,0)`;
-        projectPhoto3.style.transform = `translate3d(${x / 20}px, ${y / 20}px,0)`;
+        projectPhoto1.style.transform = `translate3d(${-(x / 60)}px, ${-(y / 60)}px,0)`;
+        projectPhoto2.style.transform = `translate3d(${-(x / 60)}px, ${-(y / 60)}px,0)`;
+        projectPhoto3.style.transform = `translate3d(${-(x / 60)}px, ${-(y / 60)}px,0)`;
         console.log("HELLO");
-    })
+    });
 
 }

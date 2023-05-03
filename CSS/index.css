@@ -20,11 +20,10 @@
 }
 
 .hey,.azeem{
-    color: #181d22;
+    color: #252D37;
     display: flex;
     z-index: 2;
     transform: translateY(-20vh);
-    font-size: 4em;
 }
 .shaik{
     color: #facf0f;
@@ -39,6 +38,7 @@
     display: flex;
     font-family: 'Noto Sans JP', sans-serif;
     transition: 0.5s ease;
+    font-size: 1.2em;
 }
 .am{
     margin-top: 2%;
@@ -352,9 +352,6 @@ form {
 
 l1{
     color: #facf0f;
-}
-.new{
-    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .contactslide{

@@ -60,6 +60,21 @@
 }
 
 
+.bgskillImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .8;
+    z-index: -1;
+}
+
+.bgskillImage img {
+    width: 27em;
+    opacity: .7;
+}
+
+
 /* ICONS USED FOR SHOWING SKILL SET */
 
 .iconshead {
