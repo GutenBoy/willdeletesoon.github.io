@@ -38,7 +38,7 @@
     display: flex;
     font-family: 'Noto Sans JP', sans-serif;
     transition: 0.5s ease;
-    font-size: 1.2em;
+    font-size: 3.5em;
 }
 .am{
     margin-top: 2%;
@@ -66,7 +66,7 @@
     left: 0%;
     bottom: 6%;
     box-shadow: 0px 2px 10px 1px #7a7373;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
 }
 .socialSection a{
     margin: 2.5vh 1vw;
@@ -242,8 +242,14 @@ form {
         width: 70vw;
     }
     .contactform input ,.contactform textarea{
-        width: 35vw;
+        width: 40vw;
     }  
+    .contactform input{
+        height: 4vh;
+    }
+    ::placeholder{
+        font-size: 0.5rem;
+    }
 }
 
 @media (max-width:450px) {
@@ -311,6 +317,9 @@ form {
     .contactMe,.submitButton{
         font-size: calc(0.2vw + 0.8vh);
     }
+    .doin{
+        font-size: 1em;
+    }
 }
 
 /* MEDIA-QUERIES FOR SOCIAL MEDIA SECTION */
@@ -331,7 +340,7 @@ form {
     .Name{
         align-items: normal;
        margin: 0px;
-       margin-top: 10%;
+       /* margin-top: 10%; */
     }
     .am{
         text-align-last: left;
@@ -423,16 +432,15 @@ l1{
 }
 @keyframes down {
     0%{
-        font-size: 3em;
     }
     100%{
-        font-size: 3em;
+        /* font-size: 3em; */
         transform: translateY(0vh);
     }
     
 }
 
-.socialSectionSliding{
+/* .socialSectionSliding{
     animation: socialSectionSliding 0.5s ease-in;
     transition: 0.2s ease;
     animation-fill-mode: forwards;
@@ -445,4 +453,4 @@ l1{
         transform: translateX(0%);
     }
     
-}
+} */

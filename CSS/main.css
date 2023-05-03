@@ -186,7 +186,7 @@ body {
     cursor: pointer;
     position: absolute;
     top: 25%;
-    font-size: 4.5vh;
+    font-size: 1.5em;
 }
 
 #NavBar .hamBurger {
@@ -206,7 +206,7 @@ body {
 
 .fillBottom {
     background-color: #facf0f;
-    height: 0.5vh;
+    height: 0.3vh;
 }
 
 
@@ -311,12 +311,15 @@ body {
     .logo:hover {
         border: 0px solid black
     }
+    .doin{
+        font-size: 1.5em;
+    }
 
 }
 
 @media (max-width:750px) {
     #NavBar {
-        height: 8.5vh;
+        height: 7vh;
     }
 
     .footer {
@@ -324,7 +327,7 @@ body {
     }
 
     .hb {
-        font-size: 4vh !important;
+        font-size:1em;
     }
 
     .socialSection {
@@ -335,7 +338,8 @@ body {
         top: 8%;
     }
     .logoContainer img{
-        width: 2em;
+        width: 1.5em;
+        margin-top: -3px;
     }
 
     .mouseHead {
@@ -344,6 +348,9 @@ body {
 
     .onloadShow {
         left: 40% !important;
+    }
+    .doin{
+        font-size: 1em;
     }
 
     .one,
@@ -437,8 +444,8 @@ body {
 }
 
 .opacityOnLoad {
-    animation: opacityOnLoad 0.5s ease;
-    transition: 0.5s ease;
+    animation: opacityOnLoad 0.8s ease;
+    transition: 0.5s linear;
 }
 
 @keyframes opacityOnLoad {
